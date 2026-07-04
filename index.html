@@ -230,6 +230,7 @@ section{padding:4.5rem 0}
   .story-photos .ph{flex:none;max-width:none}
   .story-photos .ph-tall{aspect-ratio:3/4;grid-row:span 2}
   .story-photos .ph-sq{aspect-ratio:1/1}
+  .story-photos .ph-wide{grid-column:span 2;aspect-ratio:3/2;object-position:50% 28%}
   .swipe-hint{display:none}
 }
 .ph{
@@ -239,6 +240,7 @@ section{padding:4.5rem 0}
   transition:transform .3s ease, box-shadow .3s ease;
 }
 .ph:hover{transform:rotate(-1.5deg) scale(1.03);box-shadow:var(--shadow)}
+.ph-bw{filter:grayscale(1) contrast(1.05)}
 .ph-tall{aspect-ratio:3/4}
 .ph-sq{aspect-ratio:1/1}
 
@@ -517,6 +519,8 @@ footer a{color:var(--rose-light)}
           <img class="ph ph-tall" src="cassidy-outdoors.jpg" alt="Cassidy hiking a trail in Southern Utah" style="object-fit:cover;width:100%">
           <img class="ph ph-sq" src="cassidy-animals.jpg" alt="Cassidy smiling with her animals" style="object-fit:cover;width:100%">
           <img class="ph ph-sq" src="cassidy-graduation.jpg" alt="Cassidy in her cap and gown at graduation" style="object-fit:cover;width:100%">
+          <!-- IMAGE: upload cassidy-hospital.jpg — renders in black & white automatically -->
+          <img class="ph ph-wide ph-bw" src="cassidy-hospital.jpg" alt="Cassidy as a young patient in the hospital" style="object-fit:cover;width:100%">
         </div>
         <p class="swipe-hint" aria-hidden="true">swipe →</p>
       </div>
@@ -592,6 +596,7 @@ footer a{color:var(--rose-light)}
       <p><strong>2 final interviews.</strong></p>
       <p><strong>1 offer.</strong></p>
       <p style="margin-top:1.5rem">Golisano Children's Hospital of Buffalo selected Cassidy. This is a highly respected stand-alone children's hospital with a dedicated Child Life team.</p>
+      <p style="margin-top:1rem;padding:1rem;background:var(--sage-light);border-radius:12px"><strong>Like most Child Life internships, this position is unpaid — and housing is not provided.</strong> Cassidy will complete 600 clinical hours while covering all of her own living costs. That's why every bit of support matters.</p>
     </div>
 
     <div class="reveal reveal-d2" style="max-width:62ch;margin:2rem auto 0;text-align:center">
@@ -767,6 +772,7 @@ footer a{color:var(--rose-light)}
     </div>
 
     <p class="gift-note reveal">Gift options and availability may change as new handmade items are created.</p>
+    <p class="reveal" style="text-align:center;margin:0 auto 1.5rem;max-width:52ch">Have a handmade item you'd like to donate to the fundraiser? We'd love that! <a href="mailto:itsworththeclimb@yahoo.com?subject=I%27d%20like%20to%20donate%20an%20item%20to%20Worth%20the%20Climb" style="color:var(--clay);font-weight:700">Email us at itsworththeclimb@yahoo.com</a> 💛</p>
     <div style="text-align:center" class="reveal">
       <a class="btn btn-outline" href="#gifts">View Available Gifts</a>
     </div>
@@ -860,6 +866,10 @@ footer a{color:var(--rose-light)}
       <details>
         <summary>Can I donate a custom amount?</summary>
         <div class="faq-body">Yes. Any amount helps and is deeply appreciated.</div>
+      </details>
+      <details>
+        <summary>Can I donate an item to the fundraiser?</summary>
+        <div class="faq-body">Yes! If you'd like to contribute a handmade item to be sold in support of Cassidy, email us at <a href="mailto:itsworththeclimb@yahoo.com?subject=I%27d%20like%20to%20donate%20an%20item%20to%20Worth%20the%20Climb" style="color:var(--clay);font-weight:700">itsworththeclimb@yahoo.com</a>. We'd love to include it.</div>
       </details>
       <details>
         <summary>Can I support Cassidy without donating?</summary>
