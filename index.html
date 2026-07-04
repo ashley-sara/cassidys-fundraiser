@@ -230,7 +230,6 @@ section{padding:4.5rem 0}
   .story-photos .ph{flex:none;max-width:none}
   .story-photos .ph-tall{aspect-ratio:3/4;grid-row:span 2}
   .story-photos .ph-sq{aspect-ratio:1/1}
-  .story-photos .ph-wide{grid-column:span 2;aspect-ratio:3/2;object-position:50% 28%}
   .swipe-hint{display:none}
 }
 .ph{
@@ -241,6 +240,12 @@ section{padding:4.5rem 0}
 }
 .ph:hover{transform:rotate(-1.5deg) scale(1.03);box-shadow:var(--shadow)}
 .ph-bw{filter:grayscale(1) contrast(1.05)}
+.story-inline-photo{max-width:420px;margin:1.75rem auto .5rem;box-shadow:var(--shadow)}
+.story-inline-photo img{aspect-ratio:4/3}
+.story-inline-photo figcaption{
+  font-family:var(--font-hand);font-size:1.15rem;color:var(--sage);
+  text-align:center;margin-top:.6rem;
+}
 .ph-tall{aspect-ratio:3/4}
 .ph-sq{aspect-ratio:1/1}
 
@@ -496,6 +501,10 @@ footer a{color:var(--rose-light)}
           <p>Cassidy's path to Child Life didn't start in a classroom. It started in a hospital bed.</p>
           <p>An accident in eighth grade caused a traumatic brain injury and years of chronic illness. As a teenager, she spent long days in children's hospitals searching for answers.</p>
           <p>During those days, Child Life Specialists brought her paint and canvases. Stress balls during hard procedures. The next book in her favorite series. They even advocated for her exhausted mom.</p>
+          <figure class="story-inline-photo">
+            <img class="ph-bw" src="cassidy-hospital.jpg" alt="Cassidy as a young patient in the hospital, smiling in a neck brace" style="width:100%;object-fit:cover;object-position:50% 28%;border-radius:var(--radius);display:block">
+            <figcaption>The hospital days that shaped her calling</figcaption>
+          </figure>
         </div>
 
         <div class="pull-quote reveal reveal-d2">Those small moments of comfort changed everything.</div>
@@ -519,8 +528,6 @@ footer a{color:var(--rose-light)}
           <img class="ph ph-tall" src="cassidy-outdoors.jpg" alt="Cassidy hiking a trail in Southern Utah" style="object-fit:cover;width:100%">
           <img class="ph ph-sq" src="cassidy-animals.jpg" alt="Cassidy smiling with her animals" style="object-fit:cover;width:100%">
           <img class="ph ph-sq" src="cassidy-graduation.jpg" alt="Cassidy in her cap and gown at graduation" style="object-fit:cover;width:100%">
-          <!-- IMAGE: upload cassidy-hospital.jpg — renders in black & white automatically -->
-          <img class="ph ph-wide ph-bw" src="cassidy-hospital.jpg" alt="Cassidy as a young patient in the hospital" style="object-fit:cover;width:100%">
         </div>
         <p class="swipe-hint" aria-hidden="true">swipe →</p>
       </div>
