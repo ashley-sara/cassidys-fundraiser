@@ -312,8 +312,34 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 .gift-img{
   aspect-ratio:4/3;background:linear-gradient(140deg,var(--rose-light),var(--lav-light));
   display:flex;align-items:center;justify-content:center;color:var(--forest);font-weight:600;
-  font-size:2.2rem;
+  font-size:2.2rem;overflow:hidden;
 }
+.gift-img img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;transition:transform .3s ease}
+.gift-img img:hover{transform:scale(1.06)}
+
+/* ---------- Lightbox ---------- */
+.lightbox{
+  position:fixed;inset:0;z-index:100;background:rgba(36,57,43,.92);
+  display:none;align-items:center;justify-content:center;padding:2rem;
+  backdrop-filter:blur(4px);cursor:zoom-out;
+}
+.lightbox.open{display:flex;animation:lbFade .25s ease}
+@keyframes lbFade{from{opacity:0}to{opacity:1}}
+.lightbox img{
+  max-width:92vw;max-height:82vh;border-radius:14px;border:5px solid #fff;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);animation:lbZoom .25s ease;
+}
+@keyframes lbZoom{from{transform:scale(.92);opacity:.5}to{transform:scale(1);opacity:1}}
+.lightbox-caption{
+  position:absolute;bottom:1.5rem;left:0;right:0;text-align:center;
+  color:#fff;font-family:var(--font-hand);font-size:1.4rem;padding:0 2rem;
+}
+.lightbox-close{
+  position:absolute;top:1rem;right:1.25rem;background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:999px;
+  width:44px;height:44px;font-size:1.3rem;cursor:pointer;font-family:var(--font-body);
+}
+.lightbox-close:hover{background:rgba(255,255,255,.3)}
 .gift-body{padding:1.25rem 1.25rem 1.5rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .gift-body p{font-size:.95rem;flex:1}
 .gift-meta{display:flex;justify-content:space-between;align-items:center;font-weight:700;color:var(--forest)}
@@ -760,8 +786,8 @@ footer a{color:var(--rose-light)}
           <h3>Silent Winter Morning</h3>
           <p>Original acrylic painting, 16 × 20. A quiet winter scene painted by hand.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Janis Stearns, Cassidy's grandmother</p>
-          <div class="gift-meta"><span>Price coming soon</span><span class="qty">1 available</span></div>
-          <a class="btn btn-outline js-petal" href="mailto:itsworththeclimb@yahoo.com?subject=Purchase%20Inquiry%3A%20Silent%20Winter%20Morning" style="text-align:center">Inquire to Purchase</a>
+          <div class="gift-meta"><span>$80</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/Heather-Robertson-47?txn=pay&amount=80&note=Gift%20Order%3A%20Silent%20Winter%20Morning%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -770,8 +796,8 @@ footer a{color:var(--rose-light)}
           <h3>Strawberry Moon</h3>
           <p>Original acrylic painting, 16 × 12. A luminous full moon rising through soft clouds.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Janis Stearns, Cassidy's grandmother</p>
-          <div class="gift-meta"><span>Price coming soon</span><span class="qty">1 available</span></div>
-          <a class="btn btn-outline js-petal" href="mailto:itsworththeclimb@yahoo.com?subject=Purchase%20Inquiry%3A%20Strawberry%20Moon" style="text-align:center">Inquire to Purchase</a>
+          <div class="gift-meta"><span>$80</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/Heather-Robertson-47?txn=pay&amount=80&note=Gift%20Order%3A%20Strawberry%20Moon%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -780,8 +806,8 @@ footer a{color:var(--rose-light)}
           <h3>Night Sky</h3>
           <p>Original acrylic painting, 16 × 20. The Milky Way glowing over rows of lavender.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Janis Stearns, Cassidy's grandmother</p>
-          <div class="gift-meta"><span>Price coming soon</span><span class="qty">1 available</span></div>
-          <a class="btn btn-outline js-petal" href="mailto:itsworththeclimb@yahoo.com?subject=Purchase%20Inquiry%3A%20Night%20Sky" style="text-align:center">Inquire to Purchase</a>
+          <div class="gift-meta"><span>$80</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/Heather-Robertson-47?txn=pay&amount=80&note=Gift%20Order%3A%20Night%20Sky%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -790,8 +816,8 @@ footer a{color:var(--rose-light)}
           <h3>Fall Day (Watercolor)</h3>
           <p>Framed watercolor, 15½ × 12½ including frame. Part of a seasons series.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Janis Stearns, Cassidy's grandmother</p>
-          <div class="gift-meta"><span>Price coming soon</span><span class="qty">1 available</span></div>
-          <a class="btn btn-outline js-petal" href="mailto:itsworththeclimb@yahoo.com?subject=Purchase%20Inquiry%3A%20Fall%20Day%20Watercolor" style="text-align:center">Inquire to Purchase</a>
+          <div class="gift-meta"><span>$80</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/Heather-Robertson-47?txn=pay&amount=80&note=Gift%20Order%3A%20Fall%20Day%20%28Watercolor%29%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -800,8 +826,8 @@ footer a{color:var(--rose-light)}
           <h3>Winter (Watercolor)</h3>
           <p>Framed watercolor, 15½ × 12½ including frame. Spring and Summer may join to complete the set!</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Janis Stearns, Cassidy's grandmother</p>
-          <div class="gift-meta"><span>Price coming soon</span><span class="qty">1 available</span></div>
-          <a class="btn btn-outline js-petal" href="mailto:itsworththeclimb@yahoo.com?subject=Purchase%20Inquiry%3A%20Winter%20Watercolor" style="text-align:center">Inquire to Purchase</a>
+          <div class="gift-meta"><span>$80</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/Heather-Robertson-47?txn=pay&amount=80&note=Gift%20Order%3A%20Winter%20%28Watercolor%29%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -1176,6 +1202,38 @@ document.getElementById("share-btn").addEventListener("click", sharePage);
 document.querySelectorAll(".js-copy-link").forEach(b=>{
   b.addEventListener("click", ()=> navigator.clipboard.writeText(PAGE_URL).then(()=> alert("Link copied! 🌸")));
 });
+
+/* Lightbox: click any gift or story photo to enlarge */
+(function(){
+  const lb = document.createElement("div");
+  lb.className = "lightbox";
+  lb.innerHTML = '<button class="lightbox-close" aria-label="Close image">✕</button><img alt=""><p class="lightbox-caption"></p>';
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector("img");
+  const lbCap = lb.querySelector(".lightbox-caption");
+
+  function openLB(src, alt){
+    lbImg.src = src;
+    lbImg.alt = alt || "";
+    lbCap.textContent = alt ? alt.split("—")[0].trim() : "";
+    lb.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeLB(){
+    lb.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  lb.addEventListener("click", closeLB);
+  document.addEventListener("keydown", e=>{ if(e.key === "Escape") closeLB(); });
+
+  document.querySelectorAll(".gift-img img, .story-photos img, .story-inline-photo img").forEach(img=>{
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", (e)=>{
+      e.preventDefault(); e.stopPropagation();
+      openLB(img.src, img.alt);
+    });
+  });
+})();
 
 /* Footer year */
 document.getElementById("year").textContent = new Date().getFullYear();
