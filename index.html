@@ -340,6 +340,40 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
   width:44px;height:44px;font-size:1.3rem;cursor:pointer;font-family:var(--font-body);
 }
 .lightbox-close:hover{background:rgba(255,255,255,.3)}
+.lightbox-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);color:#fff;
+  border-radius:999px;width:46px;height:46px;font-size:1.3rem;cursor:pointer;display:none;
+}
+.lightbox-nav:hover{background:rgba(255,255,255,.3)}
+.lightbox-prev{left:1rem}
+.lightbox-next{right:1rem}
+.lightbox.has-gallery .lightbox-nav{display:block}
+
+/* ---------- Card mini-carousel ---------- */
+.gift-img{position:relative}
+.car-btn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  background:rgba(251,247,239,.85);border:1px solid var(--paper-line);color:var(--forest);
+  border-radius:999px;width:34px;height:34px;font-size:1rem;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:background .2s ease, transform .2s ease;
+}
+.car-btn:hover{background:#fff;transform:translateY(-50%) scale(1.1)}
+.car-prev{left:.5rem}
+.car-next{right:.5rem}
+.car-dots{
+  position:absolute;bottom:.5rem;left:0;right:0;display:flex;gap:.35rem;justify-content:center;z-index:3;
+}
+.car-dots span{
+  width:8px;height:8px;border-radius:50%;background:rgba(251,247,239,.6);
+  border:1px solid rgba(47,74,56,.35);transition:background .2s ease, transform .2s ease;
+}
+.car-dots span.active{background:var(--forest);transform:scale(1.25)}
+.car-count{
+  position:absolute;top:.5rem;right:.5rem;z-index:3;
+  background:rgba(47,74,56,.75);color:#fff;font-size:.75rem;font-weight:700;
+  padding:.2rem .55rem;border-radius:999px;pointer-events:none;
+}
 .gift-body{padding:1.25rem 1.25rem 1.5rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .gift-body p{font-size:.95rem;flex:1}
 .gift-meta{display:flex;justify-content:space-between;align-items:center;font-weight:700;color:var(--forest)}
@@ -850,23 +884,13 @@ footer a{color:var(--rose-light)}
         </div>
       </article>
       <article class="gift reveal reveal-d1">
-        <img class="gift-img" src="gift-hanger-red.jpg" alt="Rustic 5-hook spoon and fork hanger on red painted barnwood" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-hanger-red.jpg" data-gallery="gift-hanger-red.jpg|gift-hanger-blue.jpg" alt="Rustic 5-hook spoon and fork hanger — available in red or blue barnwood" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>Rustic 5-Hook Hanger</h3>
-          <p>Vintage spoon &amp; fork hooks on reclaimed barnwood, 26¾" long. Available in light blue, dark blue, or red.</p>
+          <p>Vintage spoon &amp; fork hooks on reclaimed barnwood, 26¾" long. Available in light blue, dark blue, or red — swipe to see colors.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
           <div class="gift-meta"><span>$115</span><span class="qty">3 colors available</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%205-Hook%20Hanger%20%28choose%20light%20blue%2C%20dark%20blue%2C%20or%20red%29%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
-        </div>
-      </article>
-      <article class="gift reveal reveal-d2">
-        <img class="gift-img" src="gift-hanger-blue.jpg" alt="Rustic 5-hook spoon and fork hanger on blue barnwood" style="object-fit:cover;width:100%">
-        <div class="gift-body">
-          <h3>5-Hook Hanger — Blue Barnwood</h3>
-          <p>The same handsome 26¾" rack in weathered blue — vintage silverware bent into sturdy hooks.</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
-          <div class="gift-meta"><span>$115</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%205-Hook%20Hanger%20%E2%80%94%20Blue%20Barnwood%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -917,7 +941,7 @@ footer a{color:var(--rose-light)}
     <p class="reveal" style="text-align:center;margin:0 auto 1.5rem;max-width:52ch;font-size:.98rem">Prints, stickers, and magnets of Cassidy's own paintings. Buy her art, fund her climb. 💛</p>
     <div class="gift-grid" style="margin-bottom:3rem">
       <article class="gift reveal reveal-d1">
-        <img class="gift-img" src="gift-chicken-light.jpg" alt="Light framed print of a blue silkie chicken painting" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-chicken-light.jpg" data-gallery="gift-chicken-light.jpg|gift-chicken-light-2.jpg|gift-chicken-light-3.jpg" alt="Light framed print of a blue silkie chicken painting" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>Silkie Chicken Print — Light Frame</h3>
           <p>Framed 8×10 print of Cassidy's blue silkie chicken painting, in a light gold frame.</p>
@@ -927,7 +951,7 @@ footer a{color:var(--rose-light)}
         </div>
       </article>
       <article class="gift reveal reveal-d2">
-        <img class="gift-img" src="gift-mountains-dark.jpg" alt="Dark framed print of a golden mountains painting" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-mountains-dark.jpg" data-gallery="gift-mountains-dark.jpg|gift-mountains-dark-2.jpg" alt="Dark framed print of a golden mountains painting" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>Golden Mountains Print — Dark Frame</h3>
           <p>Framed 8×10 print of Cassidy's golden mountain landscape, in a dark frame.</p>
@@ -937,7 +961,7 @@ footer a{color:var(--rose-light)}
         </div>
       </article>
       <article class="gift reveal reveal-d3">
-        <img class="gift-img" src="gift-chicken-dark.jpg" alt="Dark framed print of a blue silkie chicken painting" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-chicken-dark.jpg" data-gallery="gift-chicken-dark.jpg|gift-chicken-dark-2.jpg|gift-chicken-dark-3.jpg" alt="Dark framed print of a blue silkie chicken painting" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>Silkie Chicken Print — Dark Frame</h3>
           <p>Framed 5×7 print of the blue silkie chicken painting, in a dark wood frame.</p>
@@ -947,7 +971,7 @@ footer a{color:var(--rose-light)}
         </div>
       </article>
       <article class="gift reveal reveal-d1">
-        <img class="gift-img" src="gift-pressed-flowers.jpg" alt="White framed pressed flowers print" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-pressed-flowers.jpg" data-gallery="gift-pressed-flowers.jpg|gift-pressed-flowers-2.jpg|gift-pressed-flowers-3.jpg" alt="White framed pressed flowers print" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>Pressed Flowers Print</h3>
           <p>Framed 5×7 print of delicate pressed flowers, in a clean white frame.</p>
@@ -957,7 +981,7 @@ footer a{color:var(--rose-light)}
         </div>
       </article>
       <article class="gift reveal reveal-d2">
-        <img class="gift-img" src="gift-sticker-wander.jpg" alt="Hand painted Let's Wander stickers with mountain and flowers" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-sticker-wander.jpg" data-gallery="gift-sticker-wander.jpg|gift-sticker-wander-2.jpg" alt="Hand painted Let's Wander stickers with mountain and flowers" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>"Let's Wander" Stickers</h3>
           <p>Hand-painted 2×2 sticker of mountains and wildflowers. Perfect for water bottles and laptops.</p>
@@ -977,7 +1001,7 @@ footer a{color:var(--rose-light)}
         </div>
       </article>
       <article class="gift reveal reveal-d1">
-        <img class="gift-img" src="gift-sticker-hike.jpg" alt="Hand painted Take a Hike stickers with mountain and blue flowers" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-sticker-hike.jpg" data-gallery="gift-sticker-hike.jpg|gift-sticker-hike-2.jpg" alt="Hand painted Take a Hike stickers with mountain and blue flowers" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>"Take a Hike" Stickers</h3>
           <p>Hand-painted 2×3 sticker with a peachy mountain and blue wildflowers.</p>
@@ -987,7 +1011,7 @@ footer a{color:var(--rose-light)}
         </div>
       </article>
       <article class="gift reveal reveal-d2">
-        <img class="gift-img" src="gift-sticker-mountain.jpg" alt="Hand painted golden mountain stickers" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-sticker-mountain.jpg" data-gallery="gift-sticker-mountain.jpg|gift-sticker-mountain-2.jpg" alt="Hand painted golden mountain stickers" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>Golden Mountain Stickers</h3>
           <p>Hand-painted 2×3 sticker of the golden mountain landscape.</p>
@@ -1017,10 +1041,10 @@ footer a{color:var(--rose-light)}
         </div>
       </article>
       <article class="gift reveal reveal-d2">
-        <img class="gift-img" src="gift-made-to-order.jpg" alt="Highland cow painting — an example of Cassidy's made-to-order designs" style="object-fit:cover;width:100%">
+        <img class="gift-img" src="gift-made-to-order.jpg" data-gallery="gift-made-to-order.jpg|gift-design-horse.jpg|gift-design-river.jpg|gift-design-vase.jpg|gift-design-trail.jpg|gift-design-abstract.jpg" alt="Highland cow painting — an example of Cassidy's made-to-order designs" style="object-fit:cover;width:100%">
         <div class="gift-body">
           <h3>Made-to-Order Designs</h3>
-          <p>Love one of Cassidy's designs? Most can be made to order as a print, sticker, or magnet — highland cows, wildflowers, landscapes, and more.</p>
+          <p>Love one of Cassidy's designs? Most can be made to order as a print, sticker, or magnet — highland cows, wildflowers, landscapes, abstracts, and more. Swipe to browse the designs!</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
           <div class="gift-meta"><span>Ask us!</span><span class="qty">Made to order</span></div>
           <a class="btn btn-outline js-petal" href="mailto:itsworththeclimb@yahoo.com?subject=Made-to-Order%20Design%20Inquiry" style="text-align:center">Request a Design</a>
@@ -1381,34 +1405,103 @@ document.querySelectorAll(".js-copy-link").forEach(b=>{
   b.addEventListener("click", ()=> navigator.clipboard.writeText(PAGE_URL).then(()=> alert("Link copied! 🌸")));
 });
 
-/* Lightbox: click any gift or story photo to enlarge */
+/* Lightbox + card carousels: browse every product photo, swipe-friendly */
 (function(){
   const lb = document.createElement("div");
   lb.className = "lightbox";
-  lb.innerHTML = '<button class="lightbox-close" aria-label="Close image">✕</button><img alt=""><p class="lightbox-caption"></p>';
+  lb.innerHTML = '<button class="lightbox-close" aria-label="Close image">✕</button>'
+               + '<button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>'
+               + '<img alt="">'
+               + '<button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>'
+               + '<p class="lightbox-caption"></p>';
   document.body.appendChild(lb);
   const lbImg = lb.querySelector("img");
   const lbCap = lb.querySelector(".lightbox-caption");
+  let lbList = [], lbIdx = 0, lbAlt = "";
 
-  function openLB(src, alt){
-    lbImg.src = src;
-    lbImg.alt = alt || "";
-    lbCap.textContent = alt ? alt.split("—")[0].trim() : "";
+  function showLB(){
+    lbImg.src = lbList[lbIdx];
+    lbImg.alt = lbAlt;
+    lbCap.textContent = lbAlt.split("—")[0].trim() + (lbList.length>1 ? "  ·  " + (lbIdx+1) + " / " + lbList.length : "");
+    lb.classList.toggle("has-gallery", lbList.length > 1);
+  }
+  function openLB(list, idx, alt){
+    lbList = list; lbIdx = idx; lbAlt = alt || "";
+    showLB();
     lb.classList.add("open");
     document.body.style.overflow = "hidden";
   }
-  function closeLB(){
-    lb.classList.remove("open");
-    document.body.style.overflow = "";
-  }
-  lb.addEventListener("click", closeLB);
-  document.addEventListener("keydown", e=>{ if(e.key === "Escape") closeLB(); });
+  function closeLB(){ lb.classList.remove("open"); document.body.style.overflow = ""; }
+  function lbStep(d){ lbIdx = (lbIdx + d + lbList.length) % lbList.length; showLB(); }
 
-  document.querySelectorAll(".gift-img img, .story-photos img, .story-inline-photo img").forEach(img=>{
-    img.style.cursor = "zoom-in";
-    img.addEventListener("click", (e)=>{
+  lb.addEventListener("click", e=>{ if(e.target === lb || e.target === lbImg || e.target.classList.contains("lightbox-close")) closeLB(); });
+  lb.querySelector(".lightbox-prev").addEventListener("click", e=>{ e.stopPropagation(); lbStep(-1); });
+  lb.querySelector(".lightbox-next").addEventListener("click", e=>{ e.stopPropagation(); lbStep(1); });
+  document.addEventListener("keydown", e=>{
+    if(!lb.classList.contains("open")) return;
+    if(e.key === "Escape") closeLB();
+    if(e.key === "ArrowLeft") lbStep(-1);
+    if(e.key === "ArrowRight") lbStep(1);
+  });
+  // Swipe inside lightbox
+  let lbX = null;
+  lb.addEventListener("touchstart", e=>{ lbX = e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener("touchend", e=>{
+    if(lbX === null || lbList.length < 2) return;
+    const dx = e.changedTouches[0].clientX - lbX;
+    if(Math.abs(dx) > 40) lbStep(dx < 0 ? 1 : -1);
+    lbX = null;
+  }, {passive:true});
+
+  /* ---- Card carousels: any product image with data-gallery ---- */
+  document.querySelectorAll(".gift-img img[data-gallery]").forEach(img=>{
+    const list = img.dataset.gallery.split("|");
+    if(list.length < 2) return;
+    const frame = img.closest(".gift-img");
+    let idx = 0;
+
+    const prev = document.createElement("button");
+    prev.className = "car-btn car-prev"; prev.innerHTML = "‹"; prev.setAttribute("aria-label","Previous photo");
+    const next = document.createElement("button");
+    next.className = "car-btn car-next"; next.innerHTML = "›"; next.setAttribute("aria-label","Next photo");
+    const dots = document.createElement("div");
+    dots.className = "car-dots";
+    list.forEach((_,i)=>{ const s=document.createElement("span"); if(i===0)s.className="active"; dots.appendChild(s); });
+    const count = document.createElement("div");
+    count.className = "car-count"; count.textContent = "1/" + list.length;
+    frame.append(prev, next, dots, count);
+
+    function go(d){
+      idx = (idx + d + list.length) % list.length;
+      img.src = list[idx];
+      count.textContent = (idx+1) + "/" + list.length;
+      dots.querySelectorAll("span").forEach((s,i)=> s.classList.toggle("active", i===idx));
+    }
+    prev.addEventListener("click", e=>{ e.preventDefault(); e.stopPropagation(); go(-1); });
+    next.addEventListener("click", e=>{ e.preventDefault(); e.stopPropagation(); go(1); });
+
+    // Touch swipe on the card image
+    let sx = null;
+    frame.addEventListener("touchstart", e=>{ sx = e.touches[0].clientX; }, {passive:true});
+    frame.addEventListener("touchend", e=>{
+      if(sx === null) return;
+      const dx = e.changedTouches[0].clientX - sx;
+      if(Math.abs(dx) > 40){ go(dx < 0 ? 1 : -1); }
+      sx = null;
+    }, {passive:true});
+
+    img.addEventListener("click", e=>{
       e.preventDefault(); e.stopPropagation();
-      openLB(img.src, img.alt);
+      openLB(list, idx, img.alt);
+    });
+  });
+
+  /* ---- Single-photo images still open the lightbox ---- */
+  document.querySelectorAll(".gift-img img:not([data-gallery]), .story-photos img, .story-inline-photo img").forEach(img=>{
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", e=>{
+      e.preventDefault(); e.stopPropagation();
+      openLB([img.src], 0, img.alt);
     });
   });
 })();
