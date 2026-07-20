@@ -381,6 +381,24 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 .gift .btn{margin-top:.6rem;text-align:center}
 .gift-note{text-align:center;margin:1.75rem auto 1rem;font-style:italic;font-size:.95rem}
 
+/* ---------- Compact surprise boxes ---------- */
+.surprise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:860px;margin:0 auto}
+@media (max-width:700px){ .surprise-grid{grid-template-columns:1fr;max-width:420px} }
+.gift-mini{
+  background:#fff;border:1px solid var(--paper-line);border-radius:var(--radius);
+  padding:1.4rem 1.25rem;text-align:center;box-shadow:0 4px 16px rgba(47,74,56,.06);
+  display:flex;flex-direction:column;align-items:center;gap:.5rem;
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;
+}
+.gift-mini:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:var(--shadow)}
+.gift-mini .mini-badge{
+  width:52px;height:52px;border-radius:50%;background:var(--rose-light);
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;
+}
+.gift-mini h3{font-size:1.6rem;margin:0}
+.gift-mini p{font-size:.9rem;margin:0}
+.gift-mini .btn{margin-top:.4rem;padding:.65rem 1.4rem;font-size:.95rem}
+
 .progress-wrap{max-width:720px;margin:2rem auto 0}
 .progress-figures{display:flex;justify-content:space-between;font-weight:800;color:var(--forest);margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem;font-size:1.15rem}
 .progress-track{
@@ -934,6 +952,17 @@ footer a{color:var(--rose-light)}
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%20Vertical%20Mug%20Holder%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
+      <article class="gift reveal reveal-d3">
+        <img class="gift-img" src="gift-mushroom-frame.jpg" data-gallery="gift-mushroom-frame.jpg|gift-mushroom-frame-2.jpg|gift-mushroom-frame-3.jpg" alt="Handcrafted picture frame decorated with sculpted mushrooms" style="object-fit:cover;width:100%">
+        <div class="gift-body">
+          <h3>Mushroom Frames</h3>
+          <p>Whimsical handcrafted picture frames decorated with sculpted mushrooms. Three sizes available — swipe to see them.</p>
+          <div class="gift-meta"><span>$25–$45</span><span class="qty">3 sizes</span></div>
+          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=25&note=Gift%20Order%3A%20Mushroom%20Frame%204%C3%976%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">4×6 — $25</a>
+          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=35&note=Gift%20Order%3A%20Mushroom%20Frame%205%C3%977%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">5×7 — $35</a>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=45&note=Gift%20Order%3A%20Mushroom%20Frame%208%C3%9710%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">8×10 — $45</a>
+        </div>
+      </article>
     </div>
 
 
@@ -1053,34 +1082,26 @@ footer a{color:var(--rose-light)}
     </div>
 
     <h3 class="reveal" style="text-align:center;margin:0 0 1.25rem">🎁 Surprise Gift Boxes</h3>
-    <div class="gift-grid">
-      <article class="gift reveal reveal-d1">
-        <div class="gift-img">🎁</div>
-        <div class="gift-body">
-          <h3>$50 Made-with-Love Surprise</h3>
-          <p>A handmade surprise chosen with care, just for you. Every surprise carries a little piece of home.</p>
-          <div class="gift-meta"><span>$50</span><span class="qty">Limited</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=50&note=Gift%20Order%3A%20%2450%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
-        </div>
-      </article>
-      <article class="gift reveal reveal-d2">
-        <div class="gift-img">🎁</div>
-        <div class="gift-body">
-          <h3>$75 Made-with-Love Surprise</h3>
-          <p>A handmade surprise chosen with care, just for you. Every surprise carries a little piece of home.</p>
-          <div class="gift-meta"><span>$75</span><span class="qty">Limited</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=75&note=Gift%20Order%3A%20%2475%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
-        </div>
-      </article>
-      <article class="gift reveal reveal-d3">
-        <div class="gift-img">🎁</div>
-        <div class="gift-body">
-          <h3>$100 Made-with-Love Surprise</h3>
-          <p>A handmade surprise chosen with care, just for you. Every surprise carries a little piece of home.</p>
-          <div class="gift-meta"><span>$100</span><span class="qty">Limited</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=100&note=Gift%20Order%3A%20%24100%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
-        </div>
-      </article>
+    <p class="reveal" style="text-align:center;margin:0 auto 1.5rem;max-width:52ch;font-size:.98rem">Can't decide? Let the family pick a handmade surprise for you.</p>
+    <div class="surprise-grid">
+      <div class="gift-mini reveal reveal-d1">
+        <div class="mini-badge" aria-hidden="true">🎁</div>
+        <h3>$50</h3>
+        <p>Made-with-Love Surprise — a handmade gift chosen with care, just for you.</p>
+        <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=50&note=Gift%20Order%3A%20%2450%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Surprise Me</a>
+      </div>
+      <div class="gift-mini reveal reveal-d2">
+        <div class="mini-badge" aria-hidden="true">🎁</div>
+        <h3>$75</h3>
+        <p>Made-with-Love Surprise — a handmade gift chosen with care, just for you.</p>
+        <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=75&note=Gift%20Order%3A%20%2475%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Surprise Me</a>
+      </div>
+      <div class="gift-mini reveal reveal-d3">
+        <div class="mini-badge" aria-hidden="true">🎁</div>
+        <h3>$100</h3>
+        <p>Made-with-Love Surprise — a handmade gift chosen with care, just for you.</p>
+        <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=100&note=Gift%20Order%3A%20%24100%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Surprise Me</a>
+      </div>
     </div>
 
     <p class="gift-note reveal">Gift options and availability may change as new handmade items are created.</p>
