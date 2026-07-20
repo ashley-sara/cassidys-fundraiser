@@ -383,8 +383,8 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 
 /* ---------- Variant selector (products with multiple options) ---------- */
 .variant-select{
-  font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--forest);
-  padding:.65rem .8rem;border:2px solid var(--sage);border-radius:12px;background:var(--cream);
+  font-family:var(--font-body);font-size:1rem;font-weight:600;color:var(--forest);
+  padding:.7rem .8rem;min-height:44px;border:2px solid var(--sage);border-radius:12px;background:var(--cream);
   width:100%;margin-top:.3rem;cursor:pointer;
   -webkit-appearance:none;appearance:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%232F4A38'%3E%3Cpath d='M5.5 7.5l4.5 4.5 4.5-4.5' stroke='%232F4A38' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -515,6 +515,8 @@ footer a{color:var(--rose-light)}
   .jar-btn svg{width:70px}
   .progress-figures{font-size:1rem}
   .pull-quote{font-size:1.4rem}
+  .variant-select{font-size:1rem;padding:.65rem .7rem}
+  .gift-body{padding:1rem 1rem 1.25rem}
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -942,8 +944,8 @@ footer a{color:var(--rose-light)}
             <option value="1" data-price="115" data-img="gift-hanger-lightblue.jpg" data-alt="Rustic 5-hook spoon and fork hanger — light blue barnwood" data-qty="1 available" data-note="5-Hook%20Hanger%20%E2%80%94%20Light%20Blue">5-Hook — Light Blue (26¾", $115)</option>
             <option value="2" data-price="115" data-img="gift-hanger-blue.jpg" data-alt="Rustic 5-hook spoon and fork hanger — dark blue barnwood" data-qty="1 available" data-note="5-Hook%20Hanger%20%E2%80%94%20Dark%20Blue">5-Hook — Dark Blue (26¾", $115)</option>
             <option value="3" data-price="115" data-img="gift-hanger-peeling-blue.jpg" data-alt="Rustic 3-hook hanger with peeling blue paint" data-qty="1 available" data-note="3-Hook%20Hanger%20%E2%80%94%20Peeling%20Blue">3-Hook — Peeling Blue (22", $115)</option>
-            <option value="4" data-price="80" data-img="gift-hanger-white-set.jpg" data-alt="Rustic 3-hook hangers with white peeling paint" data-qty="3 available" data-note="3-Hook%20Hanger%20%E2%80%94%20White%20Peeling%20%28single%29">3-Hook — White Peeling, single ($80)</option>
-            <option value="5" data-price="200" data-img="gift-hanger-white-set.jpg" data-alt="Rustic 3-hook hangers with white peeling paint — full set" data-qty="1 set" data-note="3-Hook%20Hanger%20White%20Peeling%20%E2%80%94%20FULL%20SET%20of%203">3-Hook — White Peeling, SET of 3 ($200)</option>
+            <option value="4" data-price="80" data-img="gift-hanger-white-set.jpg" data-alt="Rustic 3-hook hangers with white peeling paint" data-qty="1 available" data-note="3-Hook%20Hanger%20%E2%80%94%20White%20Peeling%20%28single%29">3-Hook — White Peeling, single ($80)</option>
+            <option value="5" data-price="200" data-img="gift-hanger-white-set.jpg" data-alt="Rustic 3-hook hangers with white peeling paint — full set" data-qty="1 available" data-note="3-Hook%20Hanger%20White%20Peeling%20%E2%80%94%20FULL%20SET%20of%203">3-Hook — White Peeling, SET of 3 ($200)</option>
             <option value="6" data-price="80" data-img="gift-hanger-green.jpg" data-alt="Rustic 3-hook hanger on green barnwood" data-qty="1 available" data-note="3-Hook%20Hanger%20%E2%80%94%20Green%20Barnwood">3-Hook — Green Barnwood (14½", $80)</option>
           </select>
           <div class="gift-meta"><span class="variant-price">$115</span><span class="variant-qty">1 available</span></div>
@@ -971,7 +973,7 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>Framed Art Prints</h3>
           <p>Framed prints of Cassidy's own paintings. Choose your favorite design and frame below.</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <label style="font-weight:700;color:var(--forest);font-size:.9rem;text-align:left;margin-top:.3rem">Choose a print:</label>
           <select class="variant-select" aria-label="Choose a framed print">
             <option value="0" data-price="40" data-img="gift-chicken-light.jpg" data-alt="Framed print of Cassidy's blue silkie chicken painting, light gold frame" data-qty="1 available" data-note="Framed%20Print%20%E2%80%94%20Silkie%20Chicken%20%E2%80%94%20Light%20Frame%20%288%C3%9710%29" selected>Silkie Chicken — Light Frame (8×10) — $40</option>
@@ -988,7 +990,7 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>"Let's Wander" Stickers</h3>
           <p>Hand-painted 2×2 sticker of mountains and wildflowers. Perfect for water bottles and laptops.</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">10 available</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Lets%20Wander%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
@@ -998,7 +1000,7 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>Poem Sticker</h3>
           <p>Hand-painted 2×3 sticker: "All the things in life that you love are just reminders that you are exactly where you are supposed to be."</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">2 available</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Poem%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
@@ -1008,7 +1010,7 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>"Take a Hike" Stickers</h3>
           <p>Hand-painted 2×3 sticker with a peachy mountain and blue wildflowers.</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">7 available</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Take%20a%20Hike%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
@@ -1018,7 +1020,7 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>Golden Mountain Stickers</h3>
           <p>Hand-painted 2×3 sticker of the golden mountain landscape.</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">9 available</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Golden%20Mountain%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
@@ -1028,7 +1030,7 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>Golden Mountain Magnets</h3>
           <p>The golden mountains as a 2×3 magnet — art for your fridge.</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$6</span><span class="qty">9 available</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=6&note=Gift%20Order%3A%20Golden%20Mountain%20Magnet%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
@@ -1038,7 +1040,7 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>Evergreen Artistry Stickers</h3>
           <p>Cassidy's 2.5×3 brand sticker — a sweet golden retriever wreathed in wildflowers.</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">5 available</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Evergreen%20Artistry%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
@@ -1048,7 +1050,7 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>Made-to-Order Designs</h3>
           <p>Love one of Cassidy's designs? Most can be made to order as a print, sticker, or magnet. Choose a design below to ask about it.</p>
-          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry 🌲</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <label style="font-weight:700;color:var(--forest);font-size:.9rem;text-align:left;margin-top:.3rem">Choose a design:</label>
           <select class="variant-select" aria-label="Choose a made-to-order design">
             <option value="0" data-img="gift-made-to-order.jpg" data-alt="Highland cow painting design" data-subject="Made-to-Order%20Design%20Inquiry%20%E2%80%94%20Highland%20Cow" selected>Highland Cow</option>
