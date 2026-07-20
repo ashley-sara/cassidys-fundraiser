@@ -915,15 +915,19 @@ footer a{color:var(--rose-light)}
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=75&note=Gift%20Order%3A%20Custom%20Cutting%20Board%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
-      <article class="gift reveal reveal-d2">
-        <div class="gift-img"><img src="gift-mushroom-frame-1.jpg" data-gallery="gift-mushroom-frame-1.jpg|gift-mushroom-frame-2.jpg|gift-mushroom-frame-3.jpg" alt="Handcrafted mushroom picture frames" style="width:100%;height:100%;object-fit:cover"></div>
+      <article class="gift gift-variant reveal reveal-d2">
+        <div class="gift-img"><img class="variant-img" src="gift-mushroom-frame-1.jpg" alt="Handcrafted mushroom picture frame, 4x6 size" style="width:100%;height:100%;object-fit:cover"></div>
         <div class="gift-body">
           <h3>Mushroom Frames</h3>
-          <p>Charming handcrafted mushroom picture frames in three sizes — swipe to see them. Pick the size that fits your favorite photo.</p>
-          <div class="gift-meta"><span>$25–$45</span><span class="qty">3 sizes</span></div>
-          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=25&note=Gift%20Order%3A%20Mushroom%20Frame%204x6%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">4 × 6 — $25</a>
-          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=35&note=Gift%20Order%3A%20Mushroom%20Frame%205x7%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">5 × 7 — $35</a>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=45&note=Gift%20Order%3A%20Mushroom%20Frame%208x10%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">8 × 10 — $45</a>
+          <p>Charming handcrafted mushroom picture frames. Pick the size that fits your favorite photo.</p>
+          <label style="font-weight:700;color:var(--forest);font-size:.9rem;text-align:left;margin-top:.3rem">Choose a size:</label>
+          <select class="variant-select" aria-label="Choose a mushroom frame size">
+            <option value="0" data-price="25" data-img="gift-mushroom-frame-1.jpg" data-alt="Handcrafted mushroom picture frame, 4x6 size" data-qty="1 available" data-note="Gift%20Order%3A%20Mushroom%20Frame%204x6%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" selected>4 × 6 — $25</option>
+            <option value="1" data-price="35" data-img="gift-mushroom-frame-2.jpg" data-alt="Handcrafted mushroom picture frame, 5x7 size" data-qty="1 available" data-note="Gift%20Order%3A%20Mushroom%20Frame%205x7%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29">5 × 7 — $35</option>
+            <option value="2" data-price="45" data-img="gift-mushroom-frame-3.jpg" data-alt="Handcrafted mushroom picture frame, 8x10 size" data-qty="1 available" data-note="Gift%20Order%3A%20Mushroom%20Frame%208x10%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29">8 × 10 — $45</option>
+          </select>
+          <div class="gift-meta"><span class="variant-price">$25</span><span class="variant-qty">1 available</span></div>
+          <a class="btn btn-primary js-petal variant-buy" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=25&note=Gift%20Order%3A%20Mushroom%20Frame%204x6%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift gift-variant reveal reveal-d1">
