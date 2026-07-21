@@ -381,19 +381,22 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 .gift .btn{margin-top:.6rem;text-align:center}
 .gift-note{text-align:center;margin:1.75rem auto 1rem;font-style:italic;font-size:.95rem}
 
-/* ---------- Variant selector (products with multiple options) ---------- */
-.variant-select{
-  font-family:var(--font-body);font-size:1rem;font-weight:600;color:var(--forest);
-  padding:.7rem .8rem;min-height:44px;border:2px solid var(--sage);border-radius:12px;background:var(--cream);
-  width:100%;margin-top:.3rem;cursor:pointer;
-  -webkit-appearance:none;appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%232F4A38'%3E%3Cpath d='M5.5 7.5l4.5 4.5 4.5-4.5' stroke='%232F4A38' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right .7rem center;background-size:1.1rem;
-  padding-right:2.2rem;
+/* ---------- SOLD items ---------- */
+.gift.sold .gift-img img{filter:grayscale(1) brightness(.75)}
+.gift.sold{position:relative}
+.sold-ribbon{
+  position:absolute;top:12px;left:12px;z-index:4;
+  background:var(--clay);color:#fff;font-weight:800;font-size:.78rem;letter-spacing:.06em;
+  padding:.4rem 1rem;border-radius:999px;box-shadow:0 3px 8px rgba(0,0,0,.25);
+  text-transform:uppercase;pointer-events:none;
 }
-.variant-select:focus-visible{outline:3px solid var(--clay);outline-offset:2px}
-.gift-variant .gift-img{transition:opacity .2s ease}
-.gift-variant .gift-img.swapping{opacity:.4}
+.btn-sold{
+  background:var(--linen);color:var(--sage);border:2px solid var(--paper-line);
+  cursor:not-allowed;pointer-events:none;
+}
+.btn-sold:hover{transform:none;box-shadow:none}
+
+/* ---------- Variant selector (products with multiple options) ---------- */
 
 /* ---------- Compact surprise boxes ---------- */
 .surprise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:860px;margin:0 auto}
@@ -496,13 +499,15 @@ footer a{color:var(--rose-light)}
 
 .sticky-donate{
   display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;
-  padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+  padding:.6rem 1rem calc(.6rem + env(safe-area-inset-bottom));
   background:rgba(251,247,239,.95);backdrop-filter:blur(8px);
   border-top:1px solid var(--paper-line);
+  gap:.6rem;
 }
-.sticky-donate .btn{width:100%;text-align:center;animation:gentlePulse 2.5s ease-in-out infinite}
+.sticky-donate .btn{flex:1;text-align:center;padding:.75rem .5rem;font-size:.92rem;white-space:nowrap}
+.sticky-donate .btn-primary{animation:gentlePulse 2.5s ease-in-out infinite}
 @keyframes gentlePulse{0%,100%{box-shadow:0 0 0 0 rgba(47,74,56,.35)}50%{box-shadow:0 0 0 10px rgba(47,74,56,0)}}
-@media (max-width:760px){ .sticky-donate{display:block} }
+@media (max-width:760px){ .sticky-donate{display:flex} }
 
 .divider{display:block;margin:0 auto;width:130px;height:auto;opacity:.9}
 
@@ -515,7 +520,6 @@ footer a{color:var(--rose-light)}
   .jar-btn svg{width:70px}
   .progress-figures{font-size:1rem}
   .pull-quote{font-size:1.4rem}
-  .variant-select{font-size:1rem;padding:.65rem .7rem}
   .gift-body{padding:1rem 1rem 1.25rem}
 }
 
@@ -538,8 +542,8 @@ footer a{color:var(--rose-light)}
     </a>
     <div class="nav-links">
       <a href="#story">Her Story</a>
-      <a href="#why">Why It Matters</a>
-      <a href="#gifts">Gifts</a>
+      <a href="#ways">Ways to Give</a>
+      <a href="#gifts">🎁 Gift Shop</a>
       <a href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.2rem">Donate Now</a>
     </div>
   </div>
@@ -715,20 +719,20 @@ footer a{color:var(--rose-light)}
       <p>Choose the path that feels right for you. Every kind of support matters.</p>
     </div>
     <div class="card-grid grid-4">
-      <a class="card reveal reveal-d1" href="#sponsor">
+      <a class="card reveal reveal-d1" href="#gifts">
+        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="20" width="28" height="20" rx="3" fill="#D8A49B"/><rect x="10" y="14" width="28" height="8" rx="2" fill="#C98F86"/><rect x="21" y="14" width="6" height="26" fill="#FBF7EF"/><path d="M24 14 C18 6 10 12 24 14 Z M24 14 C30 6 38 12 24 14 Z" fill="#9CAE8C"/></svg>
+        <h3>Shop Handmade Gifts</h3>
+        <p>Handmade items created by family.</p>
+      </a>
+      <a class="card reveal reveal-d2" href="#sponsor">
         <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="16" r="9" fill="#F2C879"/><path d="M24 28 C14 28 10 36 10 42 L38 42 C38 36 34 28 24 28 Z" fill="#9CAE8C"/><circle cx="24" cy="16" r="3.5" fill="#FBF7EF"/></svg>
         <h3>Sponsor Her for a Day</h3>
         <p>Cover meals, transportation, and essentials.</p>
       </a>
-      <a class="card reveal reveal-d2" href="#pantry">
+      <a class="card reveal reveal-d3" href="#pantry">
         <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="14" width="20" height="26" rx="4" fill="#B9AECB"/><rect x="17" y="8" width="14" height="7" rx="2" fill="#9CAE8C"/><rect x="18" y="22" width="12" height="10" rx="2" fill="#FBF7EF"/></svg>
         <h3>Fill Her Pantry</h3>
         <p>Help stock groceries and comforts of home.</p>
-      </a>
-      <a class="card reveal reveal-d3" href="#gifts">
-        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="20" width="28" height="20" rx="3" fill="#D8A49B"/><rect x="10" y="14" width="28" height="8" rx="2" fill="#C98F86"/><rect x="21" y="14" width="6" height="26" fill="#FBF7EF"/><path d="M24 14 C18 6 10 12 24 14 Z M24 14 C30 6 38 12 24 14 Z" fill="#9CAE8C"/></svg>
-        <h3>Shop Handmade Gifts</h3>
-        <p>Handmade items created by family.</p>
       </a>
       <a class="card reveal reveal-d4" href="#donate">
         <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40 C12 31 8 22 14 16 C18 12 24 15 24 20 C24 15 30 12 34 16 C40 22 36 31 24 40 Z" fill="#9CAE8C"/><circle cx="24" cy="10" r="4" fill="#D8A49B"/></svg>
@@ -813,6 +817,7 @@ footer a{color:var(--rose-light)}
       <span class="eyebrow">Handmade with Heart</span>
       <h2 id="gifts-h">Handmade Gifts Made with Love</h2>
       <p>Cassidy's family is creating handmade gifts to help support her move and internship. Each purchase helps fund her journey and carries a little piece of home with it.</p>
+      <p class="reveal" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--sage-light);color:var(--forest);font-weight:700;font-size:.95rem;padding:.6rem 1.25rem;border-radius:999px;margin:1.25rem auto 0">📦 Shipping included on every handmade gift</p>
     </div>
 
     <h3 class="reveal" style="text-align:center;margin:0 0 1.25rem">🌼 Handmade &amp; Donated Treasures</h3>
@@ -837,14 +842,14 @@ footer a{color:var(--rose-light)}
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=80&note=Gift%20Order%3A%20Strawberry%20Moon%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
-      <article class="gift reveal reveal-d3">
-        <div class="gift-img"><img src="gift-night-sky.jpg" alt="Night Sky — original acrylic painting of the Milky Way over a lavender field" style="width:100%;height:100%;object-fit:cover"></div>
+      <article class="gift sold reveal reveal-d3">
+        <div class="gift-img"><span class="sold-ribbon">Sold</span><img src="gift-night-sky.jpg" alt="Night Sky — original acrylic painting of the Milky Way over a lavender field (sold)" style="width:100%;height:100%;object-fit:cover"></div>
         <div class="gift-body">
           <h3>Night Sky</h3>
           <p>Original acrylic painting, 16 × 20. The Milky Way glowing over rows of lavender.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Janis Stearns, Cassidy's grandmother</p>
-          <div class="gift-meta"><span>$80</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=80&note=Gift%20Order%3A%20Night%20Sky%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <div class="gift-meta"><span>$80</span><span class="qty">Sold</span></div>
+          <span class="btn btn-sold" aria-disabled="true">Sold — Thank You! 💛</span>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -917,39 +922,56 @@ footer a{color:var(--rose-light)}
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=75&note=Gift%20Order%3A%20Custom%20Cutting%20Board%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
-      <article class="gift gift-variant reveal reveal-d2">
-        <div class="gift-img"><img class="variant-img" src="gift-mushroom-frame-1.jpg" alt="Handcrafted mushroom picture frame, 4x6 size" style="width:100%;height:100%;object-fit:cover"></div>
+            <article class="gift reveal reveal-d2">
+        <div class="gift-img"><img src="gift-mushroom-frame-1.jpg" data-gallery="gift-mushroom-frame-1.jpg|gift-mushroom-frame-2.jpg|gift-mushroom-frame-3.jpg" alt="Handcrafted mushroom picture frames" style="width:100%;height:100%;object-fit:cover"></div>
         <div class="gift-body">
           <h3>Mushroom Frames</h3>
-          <p>Charming handcrafted mushroom picture frames. Pick the size that fits your favorite photo.</p>
-          <label style="font-weight:700;color:var(--forest);font-size:.9rem;text-align:left;margin-top:.3rem">Choose a size:</label>
-          <select class="variant-select" aria-label="Choose a mushroom frame size">
-            <option value="0" data-price="25" data-img="gift-mushroom-frame-1.jpg" data-alt="Handcrafted mushroom picture frame, 4x6 size" data-qty="1 available" data-note="Gift%20Order%3A%20Mushroom%20Frame%204x6%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" selected>4 × 6 — $25</option>
-            <option value="1" data-price="35" data-img="gift-mushroom-frame-2.jpg" data-alt="Handcrafted mushroom picture frame, 5x7 size" data-qty="1 available" data-note="Gift%20Order%3A%20Mushroom%20Frame%205x7%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29">5 × 7 — $35</option>
-            <option value="2" data-price="45" data-img="gift-mushroom-frame-3.jpg" data-alt="Handcrafted mushroom picture frame, 8x10 size" data-qty="1 available" data-note="Gift%20Order%3A%20Mushroom%20Frame%208x10%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29">8 × 10 — $45</option>
-          </select>
-          <div class="gift-meta"><span class="variant-price">$25</span><span class="variant-qty">1 available</span></div>
-          <a class="btn btn-primary js-petal variant-buy" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=25&note=Gift%20Order%3A%20Mushroom%20Frame%204x6%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <p>Charming handcrafted mushroom picture frames in three sizes. Pick the size that fits your favorite photo.</p>
+          <div class="gift-meta"><span>$25–$45</span><span class="qty">3 sizes</span></div>
+          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=25&note=Gift%20Order%3A%20Mushroom%20Frame%204x6%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">4 × 6 — $25</a>
+          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=35&note=Gift%20Order%3A%20Mushroom%20Frame%205x7%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">5 × 7 — $35</a>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=45&note=Gift%20Order%3A%20Mushroom%20Frame%208x10%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">8 × 10 — $45</a>
         </div>
       </article>
-      <article class="gift gift-variant reveal reveal-d1">
-        <div class="gift-img"><img class="variant-img" src="gift-hanger-red.jpg" alt="Rustic 5-hook spoon and fork hanger — red barnwood" style="width:100%;height:100%;object-fit:cover"></div>
+            <article class="gift reveal reveal-d1">
+        <div class="gift-img"><img src="gift-hanger-red.jpg" data-gallery="gift-hanger-red.jpg|gift-hanger-lightblue.jpg|gift-hanger-blue.jpg" alt="Rustic 5-hook spoon and fork hanger — available in red, light blue, or dark blue" style="width:100%;height:100%;object-fit:cover"></div>
         <div class="gift-body">
-          <h3>Spoon &amp; Fork Wall Hangers</h3>
-          <p>Vintage spoon &amp; fork hooks upcycled onto reclaimed barnwood. Every piece is one of a kind — choose your favorite below.</p>
+          <h3>5-Hook Hanger</h3>
+          <p>Vintage spoon &amp; fork hooks on reclaimed barnwood, 26¾" long. Swipe through the photos to see all three colors — red, light blue, and dark blue.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
-          <label style="font-weight:700;color:var(--forest);font-size:.9rem;text-align:left;margin-top:.3rem">Choose a style:</label>
-          <select class="variant-select" aria-label="Choose a hanger style">
-            <option value="0" data-price="115" data-img="gift-hanger-red.jpg" data-alt="Rustic 5-hook spoon and fork hanger — red barnwood" data-qty="1 of each available" data-note="5-Hook%20Hanger%20%E2%80%94%20Red" selected>5-Hook — Red (26¾", $115)</option>
-            <option value="1" data-price="115" data-img="gift-hanger-lightblue.jpg" data-alt="Rustic 5-hook spoon and fork hanger — light blue barnwood" data-qty="1 of each available" data-note="5-Hook%20Hanger%20%E2%80%94%20Light%20Blue">5-Hook — Light Blue (26¾", $115)</option>
-            <option value="2" data-price="115" data-img="gift-hanger-blue.jpg" data-alt="Rustic 5-hook spoon and fork hanger — dark blue barnwood" data-qty="1 of each available" data-note="5-Hook%20Hanger%20%E2%80%94%20Dark%20Blue">5-Hook — Dark Blue (26¾", $115)</option>
-            <option value="3" data-price="115" data-img="gift-hanger-peeling-blue.jpg" data-alt="Rustic 3-hook hanger with peeling blue paint" data-qty="1 of each available" data-note="3-Hook%20Hanger%20%E2%80%94%20Peeling%20Blue">3-Hook — Peeling Blue (22", $115)</option>
-            <option value="4" data-price="80" data-img="gift-hanger-white-set.jpg" data-alt="Rustic 3-hook hangers with white peeling paint" data-qty="1 of each available" data-note="3-Hook%20Hanger%20%E2%80%94%20White%20Peeling%20%28single%29">3-Hook — White Peeling, single ($80)</option>
-            <option value="5" data-price="200" data-img="gift-hanger-white-set.jpg" data-alt="Rustic 3-hook hangers with white peeling paint — full set" data-qty="1 of each available" data-note="3-Hook%20Hanger%20White%20Peeling%20%E2%80%94%20FULL%20SET%20of%203">3-Hook — White Peeling, SET of 3 ($200)</option>
-            <option value="6" data-price="80" data-img="gift-hanger-green.jpg" data-alt="Rustic 3-hook hanger on green barnwood" data-qty="1 of each available" data-note="3-Hook%20Hanger%20%E2%80%94%20Green%20Barnwood">3-Hook — Green Barnwood (14½", $80)</option>
-          </select>
-          <div class="gift-meta"><span class="variant-price">$115</span><span class="variant-qty">1 of each available</span></div>
-          <a class="btn btn-primary js-petal variant-buy" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=5-Hook%20Hanger%20%E2%80%94%20Red" target="_blank" rel="noopener">Purchase This Gift</a>
+          <div class="gift-meta"><span>$115</span><span class="qty">3 colors — pick your favorite in the note</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%205-Hook%20Hanger%20%28specify%20color%3A%20red%2C%20light%20blue%2C%20or%20dark%20blue%29%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+        </div>
+      </article>
+      <article class="gift reveal reveal-d2">
+        <div class="gift-img"><img src="gift-hanger-peeling-blue.jpg" alt="Rustic 3-hook spoon hanger on wood with peeling blue paint" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="gift-body">
+          <h3>3-Hook Hanger — Peeling Blue</h3>
+          <p>Vintage spoon hooks on 22" of beautifully chippy blue-painted wood. Full of farmhouse character.</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
+          <div class="gift-meta"><span>$115</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%203-Hook%20Hanger%20%E2%80%94%20Peeling%20Blue%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+        </div>
+      </article>
+      <article class="gift reveal reveal-d3">
+        <div class="gift-img"><img src="gift-hanger-white-set.jpg" alt="Three rustic 3-hook spoon and fork hangers with white peeling paint" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="gift-body">
+          <h3>3-Hook Hangers — White Peeling</h3>
+          <p>Vintage spoon &amp; fork hooks on white chippy-paint barnwood. $80 each, or take all three for $200.</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
+          <div class="gift-meta"><span>$80 / $200 set</span><span class="qty">3 available</span></div>
+          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=200&note=Gift%20Order%3A%20White%20Peeling%20Hanger%20%E2%80%94%20FULL%20SET%20of%203%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">Buy the Set of 3 — $200</a>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=80&note=Gift%20Order%3A%203-Hook%20Hanger%20%E2%80%94%20White%20Peeling%20%28single%29%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+        </div>
+      </article>
+      <article class="gift reveal reveal-d1">
+        <div class="gift-img"><img src="gift-hanger-green.jpg" alt="Rustic 3-hook hanger on green barnwood" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="gift-body">
+          <h3>3-Hook Hanger — Green Barnwood</h3>
+          <p>Vintage silverware hooks on 14½" of reclaimed green barnwood. Compact and full of charm.</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
+          <div class="gift-meta"><span>$80</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=80&note=Gift%20Order%3A%203-Hook%20Hanger%20%E2%80%94%20Green%20Barnwood%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -968,21 +990,44 @@ footer a{color:var(--rose-light)}
     <h3 class="reveal" style="text-align:center;margin:0 0 .5rem">🎨 Cassidy's Art — Evergreen Artistry</h3>
     <p class="reveal" style="text-align:center;margin:0 auto 1.5rem;max-width:52ch;font-size:.98rem">Prints, stickers, and magnets of Cassidy's own paintings. Buy her art, fund her climb. 💛</p>
     <div class="gift-grid" style="margin-bottom:3rem">
-      <article class="gift gift-variant reveal reveal-d1">
-        <div class="gift-img"><img class="variant-img" src="gift-chicken-light.jpg" alt="Framed print of Cassidy's blue silkie chicken painting, light gold frame" style="width:100%;height:100%;object-fit:cover"></div>
+            <article class="gift reveal reveal-d1">
+        <div class="gift-img"><img src="gift-chicken-light.jpg" data-gallery="gift-chicken-light.jpg|gift-chicken-light-2.jpg|gift-chicken-light-3.jpg" alt="Light framed print of a blue silkie chicken painting" style="width:100%;height:100%;object-fit:cover"></div>
         <div class="gift-body">
-          <h3>Framed Art Prints</h3>
-          <p>Framed prints of Cassidy's own paintings. Choose your favorite design and frame below.</p>
+          <h3>Silkie Chicken Print — Light Frame</h3>
+          <p>Framed 8×10 print of Cassidy's blue silkie chicken painting, in a light gold frame.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
-          <label style="font-weight:700;color:var(--forest);font-size:.9rem;text-align:left;margin-top:.3rem">Choose a print:</label>
-          <select class="variant-select" aria-label="Choose a framed print">
-            <option value="0" data-price="40" data-img="gift-chicken-light.jpg" data-alt="Framed print of Cassidy's blue silkie chicken painting, light gold frame" data-qty="1 available" data-note="Framed%20Print%20%E2%80%94%20Silkie%20Chicken%20%E2%80%94%20Light%20Frame%20%288%C3%9710%29" selected>Silkie Chicken — Light Frame (8×10) — $40</option>
-            <option value="1" data-price="40" data-img="gift-mountains-dark.jpg" data-alt="Framed print of Cassidy's golden mountain landscape, dark frame" data-qty="1 available" data-note="Framed%20Print%20%E2%80%94%20Golden%20Mountains%20%E2%80%94%20Dark%20Frame%20%288%C3%9710%29">Golden Mountains — Dark Frame (8×10) — $40</option>
-            <option value="2" data-price="40" data-img="gift-chicken-dark.jpg" data-alt="Framed print of the blue silkie chicken painting, dark wood frame" data-qty="1 available" data-note="Framed%20Print%20%E2%80%94%20Silkie%20Chicken%20%E2%80%94%20Dark%20Frame%20%285%C3%977%29">Silkie Chicken — Dark Frame (5×7) — $40</option>
-            <option value="3" data-price="40" data-img="gift-pressed-flowers.jpg" data-alt="Framed print of delicate pressed flowers, clean white frame" data-qty="1 available" data-note="Framed%20Print%20%E2%80%94%20Pressed%20Flowers%20%285%C3%977%29">Pressed Flowers (5×7) — $40</option>
-          </select>
-          <div class="gift-meta"><span class="variant-price">$40</span><span class="variant-qty">1 available</span></div>
-          <a class="btn btn-primary js-petal variant-buy" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Silkie%20Chicken%20%E2%80%94%20Light%20Frame%20%288%C3%9710%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <div class="gift-meta"><span>$40</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Silkie%20Chicken%20Light%20Frame%208x10" target="_blank" rel="noopener">Purchase This Gift</a>
+        </div>
+      </article>
+      <article class="gift reveal reveal-d2">
+        <div class="gift-img"><img src="gift-mountains-dark.jpg" data-gallery="gift-mountains-dark.jpg|gift-mountains-dark-2.jpg" alt="Dark framed print of a golden mountains painting" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="gift-body">
+          <h3>Golden Mountains Print — Dark Frame</h3>
+          <p>Framed 8×10 print of Cassidy's golden mountain landscape, in a dark frame.</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
+          <div class="gift-meta"><span>$40</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Golden%20Mountains%20Dark%20Frame%208x10" target="_blank" rel="noopener">Purchase This Gift</a>
+        </div>
+      </article>
+      <article class="gift reveal reveal-d3">
+        <div class="gift-img"><img src="gift-chicken-dark.jpg" data-gallery="gift-chicken-dark.jpg|gift-chicken-dark-2.jpg|gift-chicken-dark-3.jpg" alt="Dark framed print of a blue silkie chicken painting" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="gift-body">
+          <h3>Silkie Chicken Print — Dark Frame</h3>
+          <p>Framed 5×7 print of the blue silkie chicken painting, in a dark wood frame.</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
+          <div class="gift-meta"><span>$40</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Silkie%20Chicken%20Dark%20Frame%205x7" target="_blank" rel="noopener">Purchase This Gift</a>
+        </div>
+      </article>
+      <article class="gift reveal reveal-d1">
+        <div class="gift-img"><img src="gift-pressed-flowers.jpg" data-gallery="gift-pressed-flowers.jpg|gift-pressed-flowers-2.jpg|gift-pressed-flowers-3.jpg" alt="White framed pressed flowers print" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="gift-body">
+          <h3>Pressed Flowers Print</h3>
+          <p>Framed 5×7 print of delicate pressed flowers, in a clean white frame.</p>
+          <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
+          <div class="gift-meta"><span>$40</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Pressed%20Flowers%205x7" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -1045,23 +1090,14 @@ footer a{color:var(--rose-light)}
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Evergreen%20Artistry%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
-      <article class="gift gift-variant reveal reveal-d2">
-        <div class="gift-img"><img class="variant-img" src="gift-made-to-order.jpg" alt="Highland cow painting design" style="width:100%;height:100%;object-fit:cover"></div>
+            <article class="gift reveal reveal-d2">
+        <div class="gift-img"><img src="gift-made-to-order.jpg" data-gallery="gift-made-to-order.jpg|gift-design-horse.jpg|gift-design-river.jpg|gift-design-vase.jpg|gift-design-trail.jpg|gift-design-abstract.jpg" alt="Examples of Cassidy's made-to-order designs" style="width:100%;height:100%;object-fit:cover"></div>
         <div class="gift-body">
           <h3>Made-to-Order Designs</h3>
-          <p>Love one of Cassidy's designs? Most can be made to order as a print, sticker, or magnet. Choose a design below to ask about it.</p>
+          <p>Love one of Cassidy's designs? Swipe through a few examples — most can be made to order as a print, sticker, or magnet.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
-          <label style="font-weight:700;color:var(--forest);font-size:.9rem;text-align:left;margin-top:.3rem">Choose a design:</label>
-          <select class="variant-select" aria-label="Choose a made-to-order design">
-            <option value="0" data-img="gift-made-to-order.jpg" data-alt="Highland cow painting design" data-subject="Made-to-Order%20Design%20Inquiry%20%E2%80%94%20Highland%20Cow" selected>Highland Cow</option>
-            <option value="1" data-img="gift-design-horse.jpg" data-alt="Horse in a wildflower field painting design" data-subject="Made-to-Order%20Design%20Inquiry%20%E2%80%94%20Horse%20in%20Wildflowers">Horse in Wildflowers</option>
-            <option value="2" data-img="gift-design-river.jpg" data-alt="River sunset landscape painting design" data-subject="Made-to-Order%20Design%20Inquiry%20%E2%80%94%20River%20Sunset">River Sunset</option>
-            <option value="3" data-img="gift-design-vase.jpg" data-alt="Flower vase still life painting design" data-subject="Made-to-Order%20Design%20Inquiry%20%E2%80%94%20Flower%20Vase">Flower Vase</option>
-            <option value="4" data-img="gift-design-trail.jpg" data-alt="Mountain trail landscape painting design" data-subject="Made-to-Order%20Design%20Inquiry%20%E2%80%94%20Mountain%20Trail">Mountain Trail</option>
-            <option value="5" data-img="gift-design-abstract.jpg" data-alt="Abstract sky painting design" data-subject="Made-to-Order%20Design%20Inquiry%20%E2%80%94%20Abstract%20Sky">Abstract Sky</option>
-          </select>
           <div class="gift-meta"><span>Ask us!</span><span class="qty">Made to order</span></div>
-          <a class="btn btn-outline js-petal variant-inquire" href="mailto:itsworththeclimb@yahoo.com?subject=Made-to-Order%20Design%20Inquiry%20%E2%80%94%20Highland%20Cow" style="text-align:center">Request This Design</a>
+          <a class="btn btn-outline js-petal" href="mailto:itsworththeclimb@yahoo.com?subject=Made-to-Order%20Design%20Inquiry" style="text-align:center">Request a Design</a>
         </div>
       </article>
     </div>
@@ -1232,7 +1268,8 @@ footer a{color:var(--rose-light)}
 
 <!-- Sticky mobile donate button -->
 <div class="sticky-donate">
-  <a class="btn btn-primary" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">🌷 Donate Now</a>
+  <a class="btn btn-outline" href="#ways">🎁 Ways to Give</a>
+  <a class="btn btn-primary" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Donate</a>
 </div>
 
 <script>
@@ -1506,35 +1543,6 @@ document.querySelectorAll(".js-copy-link").forEach(b=>{
   });
 })();
 
-/* Variant selector: swap photo (and price/link) on choice.
-   Handles two card types: purchase (.variant-buy -> Venmo) and inquiry (.variant-inquire -> mailto). */
-document.querySelectorAll(".variant-select").forEach(sel=>{
-  const card  = sel.closest(".gift-variant");
-  const img   = card.querySelector(".variant-img");
-  const price = card.querySelector(".variant-price");
-  const qty   = card.querySelector(".variant-qty");
-  const buy   = card.querySelector(".variant-buy");
-  const inquire = card.querySelector(".variant-inquire");
-  const wrap  = card.querySelector(".gift-img");
-
-  sel.addEventListener("change", ()=>{
-    const opt = sel.options[sel.selectedIndex];
-    wrap.classList.add("swapping");
-    setTimeout(()=>{
-      img.src = opt.dataset.img;
-      img.alt = opt.dataset.alt;
-      wrap.classList.remove("swapping");
-    }, 120);
-    if(buy){
-      if(price) price.textContent = "$" + opt.dataset.price;
-      if(qty)   qty.textContent = opt.dataset.qty;
-      buy.href = "https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=" + opt.dataset.price + "&note=" + opt.dataset.note;
-    }
-    if(inquire){
-      inquire.href = "mailto:itsworththeclimb@yahoo.com?subject=" + opt.dataset.subject;
-    }
-  });
-});
 
 /* Footer year */
 document.getElementById("year").textContent = new Date().getFullYear();
