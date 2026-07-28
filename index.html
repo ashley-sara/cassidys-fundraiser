@@ -173,7 +173,7 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 .lightbox-next{right:1rem}
 .lightbox.has-gallery .lightbox-nav{display:block}
 .gift-img{position:relative}
-.car-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:rgba(251,247,239,.85);border:1px solid var(--paper-line);color:var(--forest);border-radius:999px;width:34px;height:34px;font-size:1rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease, transform .2s ease}
+.car-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:rgba(251,247,239,.85);border:1px solid var(--paper-line);color:var(--forest);border-radius:999px;width:40px;height:40px;font-size:1.05rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease, transform .2s ease}
 .car-btn:hover{background:#fff;transform:translateY(-50%) scale(1.1)}
 .car-prev{left:.5rem}
 .car-next{right:.5rem}
@@ -218,10 +218,10 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 .gift-mini h3{font-size:1.6rem;margin:0}
 .gift-mini p{font-size:.9rem;margin:0}
 .gift-mini .btn{margin-top:.4rem;padding:.65rem 1.4rem;font-size:.95rem}
-.buffalo-photos{
-  display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;
-  max-width:620px;margin:2.25rem auto 0;
-}
+/* ---------- Buffalo section: text with photos alongside ---------- */
+.buffalo-layout{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;max-width:var(--maxw);margin:0 auto}
+.buffalo-text p{max-width:100%}
+.buffalo-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .buffalo-photos img{
   width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);
   border:5px solid #fff;box-shadow:var(--shadow);cursor:zoom-in;
@@ -229,10 +229,14 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 }
 .buffalo-photos img:hover{transform:translateY(-4px) rotate(-.8deg)}
 .buffalo-caption{
-  font-family:var(--font-hand);font-size:1.45rem;color:var(--clay);
-  text-align:center;margin:1rem auto 0;
+  font-family:var(--font-hand);font-size:1.4rem;color:var(--clay);
+  text-align:center;margin:.9rem auto 0;max-width:100%;
 }
-@media (max-width:480px){ .buffalo-photos{gap:.8rem;max-width:100%} }
+@media (min-width:900px){
+  .buffalo-layout{grid-template-columns:1fr 1fr;column-gap:3rem}
+  .buffalo-text{max-width:62ch}
+}
+@media (max-width:480px){ .buffalo-photos{gap:.7rem} }
 
 .progress-wrap{max-width:720px;margin:2rem auto 0}
 .progress-figures{display:flex;justify-content:space-between;font-weight:800;color:var(--forest);margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem;font-size:1.15rem}
@@ -282,6 +286,13 @@ footer a{color:var(--rose-light)}
 @keyframes gentlePulse{0%,100%{box-shadow:0 0 0 0 rgba(47,74,56,.35)}50%{box-shadow:0 0 0 10px rgba(47,74,56,0)}}
 @media (max-width:760px){ .sticky-donate{display:flex} }
 .divider{display:block;margin:0 auto;width:130px;height:auto;opacity:.9}
+@media (max-width:560px){
+  /* thinner photo frames so small screens don't lose image area to border */
+  .buffalo-photos img{border-width:3px}
+  /* bigger tap targets for carousel arrows on touch */
+  .car-btn{width:44px;height:44px}
+}
+
 @media (max-width:380px){
   body{font-size:1rem}
   .wrap{padding:0 1rem}
@@ -292,6 +303,11 @@ footer a{color:var(--rose-light)}
   .progress-figures{font-size:1rem}
   .pull-quote{font-size:1.4rem}
   .gift-body{padding:1rem 1rem 1.25rem}
+  /* stats card breathes better with less padding on tiny screens */
+  .buffalo-text > div:first-child{padding:1.4rem !important}
+  .buffalo-caption{font-size:1.25rem}
+  .sold-mini figcaption{font-size:.78rem}
+  .sold-strip{gap:.7rem}
 }
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
@@ -435,23 +451,30 @@ footer a{color:var(--rose-light)}
       <span class="eyebrow">Fall 2026</span>
       <h2 id="internship-h">A Rare Opportunity in Buffalo</h2>
     </div>
-    <div class="reveal reveal-d1" style="max-width:62ch;margin:0 auto;background:#fff;border:1px solid var(--paper-line);border-radius:var(--radius);padding:2rem;text-align:center;">
-      <p><strong>32 applications.</strong></p>
-      <p><strong>3 interviews.</strong></p>
-      <p><strong>2 final interviews.</strong></p>
-      <p><strong>1 offer.</strong></p>
-      <p style="margin-top:1.5rem">Golisano Children's Hospital of Buffalo selected Cassidy. This is a highly respected stand-alone children's hospital with a dedicated Child Life team.</p>
-      <p style="margin-top:1rem;padding:1rem;background:var(--sage-light);border-radius:12px"><strong>Like most Child Life internships, this position is unpaid — and housing is not provided.</strong> Cassidy will complete 600 clinical hours while covering all of her own living costs. That's why every bit of support matters.</p>
-    </div>
-    <div class="reveal reveal-d2" style="max-width:62ch;margin:2rem auto 0;text-align:center">
-      <p>This internship is the final step in Cassidy's training before certification. It will give her 16 weeks of supervised clinical experience and help her move from student to professional.</p>
-    </div>
 
-    <div class="buffalo-photos reveal reveal-d3">
-      <img src="cassidy-buffalo-1.jpg" alt="Cassidy smiling in her Buffalo sweatshirt from Golisano Children's Hospital">
-      <img src="cassidy-buffalo-2.jpg" alt="Close-up of the Golisano Children's Hospital Buffalo logo on Cassidy's sleeve">
+    <div class="buffalo-layout">
+      <div class="buffalo-text">
+        <div class="reveal reveal-d1" style="background:#fff;border:1px solid var(--paper-line);border-radius:var(--radius);padding:2rem;text-align:center;">
+          <p><strong>32 applications.</strong></p>
+          <p><strong>3 interviews.</strong></p>
+          <p><strong>2 final interviews.</strong></p>
+          <p><strong>1 offer.</strong></p>
+          <p style="margin-top:1.5rem">Golisano Children's Hospital of Buffalo selected Cassidy. This is a highly respected stand-alone children's hospital with a dedicated Child Life team.</p>
+          <p style="margin-top:1rem;padding:1rem;background:var(--sage-light);border-radius:12px"><strong>Like most Child Life internships, this position is unpaid — and housing is not provided.</strong> Cassidy will complete 600 clinical hours while covering all of her own living costs. That's why every bit of support matters.</p>
+        </div>
+        <div class="reveal reveal-d2" style="margin:1.75rem auto 0;text-align:center">
+          <p>This internship is the final step in Cassidy's training before certification. It will give her 16 weeks of supervised clinical experience and help her move from student to professional.</p>
+        </div>
+      </div>
+
+      <div class="buffalo-media reveal reveal-d3">
+        <div class="buffalo-photos">
+          <img src="cassidy-buffalo-1.jpg" alt="Cassidy smiling in her Buffalo sweatshirt from Golisano Children's Hospital">
+          <img src="cassidy-buffalo-2.jpg" alt="Close-up of the Golisano Children's Hospital Buffalo logo on Cassidy's sleeve">
+        </div>
+        <p class="buffalo-caption">Officially Buffalo bound. 💙</p>
+      </div>
     </div>
-    <p class="buffalo-caption reveal reveal-d3">Officially Buffalo bound. 💙</p>
   </div>
 </section>
 
