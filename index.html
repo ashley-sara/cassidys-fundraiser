@@ -218,6 +218,22 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 .gift-mini h3{font-size:1.6rem;margin:0}
 .gift-mini p{font-size:.9rem;margin:0}
 .gift-mini .btn{margin-top:.4rem;padding:.65rem 1.4rem;font-size:.95rem}
+.buffalo-photos{
+  display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;
+  max-width:620px;margin:2.25rem auto 0;
+}
+.buffalo-photos img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);
+  border:5px solid #fff;box-shadow:var(--shadow);cursor:zoom-in;
+  transition:transform .3s ease;display:block;
+}
+.buffalo-photos img:hover{transform:translateY(-4px) rotate(-.8deg)}
+.buffalo-caption{
+  font-family:var(--font-hand);font-size:1.45rem;color:var(--clay);
+  text-align:center;margin:1rem auto 0;
+}
+@media (max-width:480px){ .buffalo-photos{gap:.8rem;max-width:100%} }
+
 .progress-wrap{max-width:720px;margin:2rem auto 0}
 .progress-figures{display:flex;justify-content:space-between;font-weight:800;color:var(--forest);margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem;font-size:1.15rem}
 .progress-track{height:32px;border-radius:999px;background:#fff;border:2px solid var(--sage);overflow:visible;position:relative;margin-top:2.2rem}
@@ -430,6 +446,12 @@ footer a{color:var(--rose-light)}
     <div class="reveal reveal-d2" style="max-width:62ch;margin:2rem auto 0;text-align:center">
       <p>This internship is the final step in Cassidy's training before certification. It will give her 16 weeks of supervised clinical experience and help her move from student to professional.</p>
     </div>
+
+    <div class="buffalo-photos reveal reveal-d3">
+      <img src="cassidy-buffalo-1.jpg" alt="Cassidy smiling in her Buffalo sweatshirt from Golisano Children's Hospital">
+      <img src="cassidy-buffalo-2.jpg" alt="Close-up of the Golisano Children's Hospital Buffalo logo on Cassidy's sleeve">
+    </div>
+    <p class="buffalo-caption reveal reveal-d3">Officially Buffalo bound. 💙</p>
   </div>
 </section>
 
@@ -1221,7 +1243,7 @@ document.querySelectorAll(".js-copy-link").forEach(b=>{
     });
   });
 
-  document.querySelectorAll(".gift-img img:not([data-gallery]), .story-photos img, .story-inline-photo img, .sold-mini-img img").forEach(img=>{
+  document.querySelectorAll(".gift-img img:not([data-gallery]), .story-photos img, .story-inline-photo img, .sold-mini-img img, .buffalo-photos img").forEach(img=>{
     img.style.cursor = "zoom-in";
     img.addEventListener("click", e=>{
       e.preventDefault(); e.stopPropagation();
