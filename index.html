@@ -201,43 +201,6 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
 .mini-sold-tag{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:var(--clay);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.08em;padding:.22rem .7rem;border-radius:999px;text-transform:uppercase;pointer-events:none}
 .sold-mini figcaption{font-size:.82rem;font-weight:700;color:var(--forest);margin-top:.5rem;line-height:1.35}
 
-.surprise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:860px;margin:0 auto}
-@media (max-width:700px){ .sold-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1.1rem;max-width:900px;margin:0 auto}
-@media (max-width:560px){ .sold-strip{grid-template-columns:repeat(2,1fr);gap:.9rem} }
-.sold-mini{text-align:center}
-.sold-mini-img{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;border:1px solid var(--paper-line);background:var(--linen)}
-.sold-mini-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.82);cursor:zoom-in;transition:filter .3s ease}
-.sold-mini-img img:hover{filter:grayscale(.55) brightness(.92)}
-.mini-sold-tag{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:var(--clay);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.08em;padding:.22rem .7rem;border-radius:999px;text-transform:uppercase;pointer-events:none}
-.sold-mini figcaption{font-size:.82rem;font-weight:700;color:var(--forest);margin-top:.5rem;line-height:1.35}
-
-.surprise-grid{grid-template-columns:1fr;max-width:420px} }
-.gift-mini{background:#fff;border:1px solid var(--paper-line);border-radius:var(--radius);padding:1.4rem 1.25rem;text-align:center;box-shadow:0 4px 16px rgba(47,74,56,.06);display:flex;flex-direction:column;align-items:center;gap:.5rem;transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease}
-.gift-mini:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:var(--shadow)}
-.gift-mini .mini-badge{width:52px;height:52px;border-radius:50%;background:var(--rose-light);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
-.gift-mini h3{font-size:1.6rem;margin:0}
-.gift-mini p{font-size:.9rem;margin:0}
-.gift-mini .btn{margin-top:.4rem;padding:.65rem 1.4rem;font-size:.95rem}
-/* ---------- Buffalo section: text with photos alongside ---------- */
-.buffalo-layout{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;max-width:var(--maxw);margin:0 auto}
-.buffalo-text p{max-width:100%}
-.buffalo-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.buffalo-photos img{
-  width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);
-  border:5px solid #fff;box-shadow:var(--shadow);cursor:zoom-in;
-  transition:transform .3s ease;display:block;
-}
-.buffalo-photos img:hover{transform:translateY(-4px) rotate(-.8deg)}
-.buffalo-caption{
-  font-family:var(--font-hand);font-size:1.4rem;color:var(--clay);
-  text-align:center;margin:.9rem auto 0;max-width:100%;
-}
-@media (min-width:900px){
-  .buffalo-layout{grid-template-columns:1fr 1fr;column-gap:3rem}
-  .buffalo-text{max-width:62ch}
-}
-@media (max-width:480px){ .buffalo-photos{gap:.7rem} }
-
 .progress-wrap{max-width:720px;margin:2rem auto 0}
 .progress-figures{display:flex;justify-content:space-between;font-weight:800;color:var(--forest);margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem;font-size:1.15rem}
 .progress-track{height:32px;border-radius:999px;background:#fff;border:2px solid var(--sage);overflow:visible;position:relative;margin-top:2.2rem}
@@ -720,13 +683,13 @@ footer a{color:var(--rose-light)}
     <p class="reveal" style="text-align:center;margin:0 auto 1.5rem;max-width:52ch;font-size:.98rem">Prints, stickers, and magnets of Cassidy's own paintings. Buy her art, fund her climb. 💛</p>
     <div class="gift-grid" style="margin-bottom:3rem">
       <article class="gift reveal reveal-d1">
-        <div class="gift-img"><img src="gift-chicken-light.jpg" data-gallery="gift-chicken-light.jpg|gift-chicken-light-2.jpg|gift-chicken-light-3.jpg" alt="Light framed print of a blue silkie chicken painting" style="width:100%;height:100%;object-fit:cover"></div>
+        <div class="gift-img"><img src="gift-silkie-canvas.jpg" alt="Original acrylic canvas painting of a silkie chicken on an orange background" style="width:100%;height:100%;object-fit:cover"></div>
         <div class="gift-body">
-          <h3>Silkie Chicken Print — Light Frame</h3>
-          <p>Framed 8×10 print of Cassidy's blue silkie chicken painting, in a light gold frame.</p>
+          <h3>Silkie Chicken — Original Canvas</h3>
+          <p>The original 11 × 14 acrylic canvas, signed by Cassidy. Sold as is — this is the one-of-a-kind piece the prints came from.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
-          <div class="gift-meta"><span>$40</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Silkie%20Chicken%20Light%20Frame%208x10" target="_blank" rel="noopener">Purchase This Gift</a>
+          <div class="gift-meta"><span>$100</span><span class="qty">1 available</span></div>
+          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=100&note=Gift%20Order%3A%20Silkie%20Chicken%20ORIGINAL%20Canvas%2011x14%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -774,8 +737,9 @@ footer a{color:var(--rose-light)}
         <div class="gift-body">
           <h3>Poem Sticker</h3>
           <p>Hand-painted 2×3 sticker: "All the things in life that you love are just reminders that you are exactly where you are supposed to be."</p>
+          <p style="font-size:.85rem;color:var(--clay);font-weight:700;margin:0">Current batch sold out — new ones painted to order!</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
-          <div class="gift-meta"><span>$4</span><span class="qty">2 available</span></div>
+          <div class="gift-meta"><span>$4</span><span class="qty">Made to order</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Poem%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
@@ -805,7 +769,7 @@ footer a{color:var(--rose-light)}
           <h3>Golden Mountain Magnets</h3>
           <p>The golden mountains as a 2×3 magnet — art for your fridge.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
-          <div class="gift-meta"><span>$6</span><span class="qty">9 available</span></div>
+          <div class="gift-meta"><span>$6</span><span class="qty">3 available</span></div>
           <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=6&note=Gift%20Order%3A%20Golden%20Mountain%20Magnet%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
         </div>
       </article>
@@ -831,31 +795,7 @@ footer a{color:var(--rose-light)}
       </article>
     </div>
 
-    <h3 class="reveal" style="text-align:center;margin:0 0 1.25rem">🎁 Surprise Gift Boxes</h3>
-    <p class="reveal" style="text-align:center;margin:0 auto 1.5rem;max-width:52ch;font-size:.98rem">Can't decide? Let the family pick a handmade surprise for you.</p>
-    <div class="surprise-grid">
-      <div class="gift-mini reveal reveal-d1">
-        <div class="mini-badge" aria-hidden="true">🎁</div>
-        <h3>$50</h3>
-        <p>Made-with-Love Surprise — a handmade gift chosen with care, just for you.</p>
-        <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=50&note=Gift%20Order%3A%20%2450%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Surprise Me</a>
-      </div>
-      <div class="gift-mini reveal reveal-d2">
-        <div class="mini-badge" aria-hidden="true">🎁</div>
-        <h3>$75</h3>
-        <p>Made-with-Love Surprise — a handmade gift chosen with care, just for you.</p>
-        <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=75&note=Gift%20Order%3A%20%2475%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Surprise Me</a>
-      </div>
-      <div class="gift-mini reveal reveal-d3">
-        <div class="mini-badge" aria-hidden="true">🎁</div>
-        <h3>$100</h3>
-        <p>Made-with-Love Surprise — a handmade gift chosen with care, just for you.</p>
-        <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=100&note=Gift%20Order%3A%20%24100%20Surprise%20%F0%9F%8E%81%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Surprise Me</a>
-      </div>
-    </div>
-
-
-    <h3 class="reveal" style="text-align:center;margin:3rem 0 .5rem">💛 These Found Their Homes</h3>
+        <h3 class="reveal" style="text-align:center;margin:3rem 0 .5rem">💛 These Found Their Homes</h3>
     <p class="reveal" style="text-align:center;margin:0 auto 1.5rem;max-width:52ch;font-size:.98rem">Thank you to everyone who has already purchased a handmade gift — every one of these helped carry Cassidy closer to Buffalo.</p>
     <div class="sold-strip reveal">
       <figure class="sold-mini">
@@ -881,6 +821,10 @@ footer a{color:var(--rose-light)}
       <figure class="sold-mini">
         <div class="sold-mini-img"><img src="gift-cards-set.jpg" alt="Set of hand-painted watercolor greeting cards with envelopes"><span class="mini-sold-tag">Sold</span></div>
         <figcaption>Hand-Painted Greeting Cards</figcaption>
+      </figure>
+      <figure class="sold-mini">
+        <div class="sold-mini-img"><img src="gift-chicken-light.jpg" alt="Silkie Chicken Print in light gold frame (sold)"><span class="mini-sold-tag">Sold</span></div>
+        <figcaption>Silkie Chicken Print — Light Frame</figcaption>
       </figure>
     </div>
 
