@@ -226,6 +226,17 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
   .buffalo-photos{gap:.7rem}
 }
 
+.venmo-tip{
+  display:flex;align-items:flex-start;gap:.6rem;max-width:52ch;
+  margin:1.25rem auto 0;padding:.85rem 1.15rem;
+  background:#fff;border:1px dashed var(--sage);border-radius:14px;
+  font-size:.92rem;color:var(--ink);text-align:left;line-height:1.5;
+}
+.venmo-tip strong{color:var(--forest)}
+.gift-tip{
+  font-size:.8rem;color:var(--clay);font-weight:700;margin:.15rem 0 0;line-height:1.4;
+}
+
 .progress-wrap{max-width:720px;margin:2rem auto 0}
 .progress-figures{display:flex;justify-content:space-between;font-weight:800;color:var(--forest);margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem;font-size:1.15rem}
 .progress-track{height:32px;border-radius:999px;background:#fff;border:2px solid var(--sage);overflow:visible;position:relative;margin-top:2.2rem}
@@ -506,16 +517,17 @@ footer a{color:var(--rose-light)}
       <p>Help cover one day of Cassidy's basic needs while she is in Buffalo. Your gift helps with meals, transportation, housing support, and daily essentials while she focuses on her internship.</p>
     </div>
     <div class="tiers">
-      <a class="btn btn-amount reveal reveal-d1 js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=25&note=Sponsor%20Cassidy%20%E2%80%94%20A%20Meal%20%26%20Essentials%20%F0%9F%8C%B8" target="_blank" rel="noopener" data-amount="25"><strong>$25</strong>A Meal &amp; Daily Essentials</a>
-      <a class="btn btn-amount reveal reveal-d2 js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=50&note=Sponsor%20Cassidy%20%E2%80%94%20Half%20Day%20of%20Support%20%F0%9F%8C%B8" target="_blank" rel="noopener" data-amount="50"><strong>$50</strong>A Half Day of Support</a>
-      <a class="btn btn-amount reveal reveal-d3 js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=100&note=Sponsor%20Cassidy%20for%20a%20Day%20%F0%9F%8C%B8" target="_blank" rel="noopener" data-amount="100"><strong>$100</strong>Sponsor Her for a Day</a>
-      <a class="btn btn-amount reveal reveal-d4 js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=250&note=Helping%20Carry%20a%20Big%20Piece%20of%20the%20Climb%20%F0%9F%8F%94%EF%B8%8F" target="_blank" rel="noopener" data-amount="250"><strong>$250</strong>Help Carry a Big Piece</a>
+      <a class="btn btn-amount reveal reveal-d1 js-petal js-venmo" data-amt="25" data-note="Sponsor Cassidy — Worth the Climb" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" data-amount="25"><strong>$25</strong>A Meal &amp; Daily Essentials</a>
+      <a class="btn btn-amount reveal reveal-d2 js-petal js-venmo" data-amt="50" data-note="Sponsor Cassidy — Worth the Climb" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" data-amount="50"><strong>$50</strong>A Half Day of Support</a>
+      <a class="btn btn-amount reveal reveal-d3 js-petal js-venmo" data-amt="100" data-note="Sponsor Cassidy — Worth the Climb" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" data-amount="100"><strong>$100</strong>Sponsor Her for a Day</a>
+      <a class="btn btn-amount reveal reveal-d4 js-petal js-venmo" data-amt="250" data-note="Sponsor Cassidy — Worth the Climb" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" data-amount="250"><strong>$250</strong>Help Carry a Big Piece</a>
     </div>
     <div class="custom-box reveal reveal-d1">
       <label for="sponsor-custom">Custom amount:</label>
       <input type="number" id="sponsor-custom" min="1" step="1" inputmode="numeric" placeholder="$ Any amount">
       <a class="btn btn-primary js-petal js-custom-venmo" data-input="sponsor-custom" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Give This Amount</a>
     </div>
+    <p class="venmo-tip reveal"><span>💜</span><span>Buttons open Venmo with the amount already filled in. If it doesn't carry over, just enter it there — every gift counts either way! 💛</span></p>
   </div>
 </section>
 
@@ -556,6 +568,7 @@ footer a{color:var(--rose-light)}
       <input type="number" id="pantry-custom" min="1" step="1" inputmode="numeric" placeholder="$ Any amount">
       <a class="btn btn-primary js-petal js-custom-venmo" data-input="pantry-custom" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Add to Her Pantry</a>
     </div>
+    <p class="venmo-tip reveal"><span>💜</span><span>Tap a jar to open Venmo with the amount already filled in. If it doesn't carry over, just enter it there! 💛</span></p>
   </div>
 </section>
 
@@ -566,6 +579,7 @@ footer a{color:var(--rose-light)}
       <h2 id="gifts-h">Handmade Gifts Made with Love</h2>
       <p>Cassidy's family is creating handmade gifts to help support her move and internship. Each purchase helps fund her journey and carries a little piece of home with it.</p>
       <p class="reveal" style="display:inline-flex;align-items:center;gap:.5rem;background:var(--sage-light);color:var(--forest);font-weight:700;font-size:.95rem;padding:.6rem 1.25rem;border-radius:999px;margin:1.25rem auto 0">📦 Shipping included on every handmade gift</p>
+      <p class="venmo-tip reveal"><span>💜</span><span>Buttons open Venmo with the price and item already filled in. Please add <strong>your shipping address</strong> to the Venmo note so we know where to send it!</span></p>
     </div>
 
     <h3 class="reveal" style="text-align:center;margin:0 0 1.25rem">🌼 Handmade &amp; Donated Treasures</h3>
@@ -577,7 +591,7 @@ footer a{color:var(--rose-light)}
           <p>Original acrylic painting, 16 × 20. A quiet winter scene painted by hand.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Janis Stearns, Cassidy's grandmother</p>
           <div class="gift-meta"><span>$80</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=80&note=Gift%20Order%3A%20Silent%20Winter%20Morning%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="80" data-note="Gift Order: Silent Winter Morning (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -587,7 +601,7 @@ footer a{color:var(--rose-light)}
           <p>Handmade quilt, 48½ × 59½, made with all flannel. Cozy and full of character.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Lois Drell, Cassidy's grandmother</p>
           <div class="gift-meta"><span>$115</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%20Animal%20Quilt%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="115" data-note="Gift Order: Animal Quilt (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -597,7 +611,7 @@ footer a{color:var(--rose-light)}
           <p>Handmade baby quilt, 36 × 42. Cotton front with a soft flannel backing.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Lois Drell, Cassidy's grandmother</p>
           <div class="gift-meta"><span>$65</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=65&note=Gift%20Order%3A%20Pastel%20Baby%20Quilt%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="65" data-note="Gift Order: Pastel Baby Quilt (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -607,7 +621,7 @@ footer a{color:var(--rose-light)}
           <p>Layered wood art, 9½ × 8. A forest scene nested inside a bear paw — available in light or dark finish.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Zach Hatch @ ZNC Studios</p>
           <div class="gift-meta"><span>$45</span><span class="qty">1 Left</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=45&note=Gift%20Order%3A%20Bear%20Paw%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="45" data-note="Gift Order: Bear Paw (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -617,7 +631,7 @@ footer a{color:var(--rose-light)}
           <p>Layered wood art, 4 × 8. A desert scene with cactus, moon, and mesa.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Zach Hatch @ ZNC Studios</p>
           <div class="gift-meta"><span>$40</span><span class="qty">2 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Gift%20Order%3A%20Oval%20Cactus%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="40" data-note="Gift Order: Oval Cactus (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -627,7 +641,7 @@ footer a{color:var(--rose-light)}
           <p>6 × 11 (without handle). Custom engraving included — make it personal!</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Zach Hatch @ ZNC Studios</p>
           <div class="gift-meta"><span>$75</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=75&note=Gift%20Order%3A%20Custom%20Cutting%20Board%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="75" data-note="Gift Order: Custom Cutting Board (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -636,9 +650,9 @@ footer a{color:var(--rose-light)}
           <h3>Mushroom Frames</h3>
           <p>Charming handcrafted mushroom picture frames in three sizes. Pick the size that fits your favorite photo.</p>
           <div class="gift-meta"><span>$25–$45</span><span class="qty">3 sizes</span></div>
-          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=25&note=Gift%20Order%3A%20Mushroom%20Frame%204x6%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">4 × 6 — $25</a>
-          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=35&note=Gift%20Order%3A%20Mushroom%20Frame%205x7%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">5 × 7 — $35</a>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=45&note=Gift%20Order%3A%20Mushroom%20Frame%208x10%20%F0%9F%8D%84%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">8 × 10 — $45</a>
+          <a class="btn btn-outline js-petal js-venmo" data-amt="25" data-note="Gift Order: Mushroom Frame 4 × 6 (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" style="text-align:center">4 × 6 — $25</a>
+          <a class="btn btn-outline js-petal js-venmo" data-amt="35" data-note="Gift Order: Mushroom Frame 5 × 7 (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" style="text-align:center">5 × 7 — $35</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="25" data-note="Gift Order: Mushroom Frames (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">8 × 10 — $45</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -648,7 +662,7 @@ footer a{color:var(--rose-light)}
           <p>Vintage spoon &amp; fork hooks on reclaimed barnwood, 26¾" long. Swipe through the photos to see all three colors — red, light blue, and dark blue.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
           <div class="gift-meta"><span>$115</span><span class="qty">3 colors — pick your favorite in the note</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%205-Hook%20Hanger%20%28specify%20color%3A%20red%2C%20light%20blue%2C%20or%20dark%20blue%29%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="115" data-note="Gift Order: 5-Hook Hanger (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -658,7 +672,7 @@ footer a{color:var(--rose-light)}
           <p>Vintage spoon hooks on 22" of beautifully chippy blue-painted wood. Full of farmhouse character.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
           <div class="gift-meta"><span>$115</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%203-Hook%20Hanger%20%E2%80%94%20Peeling%20Blue%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="115" data-note="Gift Order: 3-Hook Hanger — Peeling Blue (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -668,8 +682,8 @@ footer a{color:var(--rose-light)}
           <p>Vintage spoon &amp; fork hooks on white chippy-paint barnwood. $80 each, or take all three for $200.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
           <div class="gift-meta"><span>$80 / $200 set</span><span class="qty">3 available</span></div>
-          <a class="btn btn-outline js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=200&note=Gift%20Order%3A%20White%20Peeling%20Hanger%20%E2%80%94%20FULL%20SET%20of%203%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener" style="text-align:center">Buy the Set of 3 — $200</a>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=80&note=Gift%20Order%3A%203-Hook%20Hanger%20%E2%80%94%20White%20Peeling%20%28single%29%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-outline js-petal js-venmo" data-amt="200" data-note="Gift Order: White Peeling Hangers — SET of 3 (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" style="text-align:center">Buy the Set of 3 — $200</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="80" data-note="Gift Order: 3-Hook Hangers — White Peeling (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -679,7 +693,7 @@ footer a{color:var(--rose-light)}
           <p>A 28" vertical coffee cup rack with four vintage butter knife hooks. Your morning ritual, elevated.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
           <div class="gift-meta"><span>$115</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=115&note=Gift%20Order%3A%20Vertical%20Mug%20Holder%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="115" data-note="Gift Order: Vertical Mug Holder (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -689,7 +703,7 @@ footer a{color:var(--rose-light)}
           <p>Vintage spoon &amp; fork hooks on 18" of rich, dark reclaimed barnwood. Beautiful in an entryway or kitchen.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
           <div class="gift-meta"><span>$95</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=95&note=Gift%20Order%3A%203-Hook%20Hanger%20%E2%80%94%20Dark%20Barnwood%2018in%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="95" data-note="Gift Order: 3-Hook Hanger — Dark Barnwood (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -699,7 +713,7 @@ footer a{color:var(--rose-light)}
           <p>A 24" vertical rack with three vintage spoon hooks on dark reclaimed barnwood. Perfect for your favorite mugs.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Donated by Cassidy's parents</p>
           <div class="gift-meta"><span>$105</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=105&note=Gift%20Order%3A%20Vertical%20Mug%20Rack%20%E2%80%94%20Dark%20Barnwood%2024in%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="105" data-note="Gift Order: Vertical Mug Rack — Dark Barnwood (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
     </div>
@@ -714,7 +728,7 @@ footer a{color:var(--rose-light)}
           <p>The original 11 × 14 acrylic canvas, signed by Cassidy. Sold as is — this is the one-of-a-kind piece the prints came from.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$100</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=100&note=Gift%20Order%3A%20Silkie%20Chicken%20ORIGINAL%20Canvas%2011x14%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="100" data-note="Gift Order: Silkie Chicken — Original Canvas (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -724,7 +738,7 @@ footer a{color:var(--rose-light)}
           <p>Framed 8×10 print of Cassidy's golden mountain landscape, in a dark frame.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$40</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Golden%20Mountains%20Dark%20Frame%208x10" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="40" data-note="Gift Order: Golden Mountains Print — Dark Frame (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -734,7 +748,7 @@ footer a{color:var(--rose-light)}
           <p>Framed 5×7 print of the blue silkie chicken painting, in a dark wood frame.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$40</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Silkie%20Chicken%20Dark%20Frame%205x7" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="40" data-note="Gift Order: Silkie Chicken Print — Dark Frame (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -744,7 +758,7 @@ footer a{color:var(--rose-light)}
           <p>Framed 5×7 print of delicate pressed flowers, in a clean white frame.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$40</span><span class="qty">1 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=40&note=Framed%20Print%20%E2%80%94%20Pressed%20Flowers%205x7" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="40" data-note="Gift Order: Pressed Flowers Print (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -754,7 +768,7 @@ footer a{color:var(--rose-light)}
           <p>Hand-painted 2×2 sticker of mountains and wildflowers. Perfect for water bottles and laptops.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">10 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Lets%20Wander%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="4" data-note="Gift Order: "Let's Wander" Stickers (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -765,7 +779,7 @@ footer a{color:var(--rose-light)}
           <p style="font-size:.85rem;color:var(--clay);font-weight:700;margin:0">Current batch sold out — new ones painted to order!</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">Made to order</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Poem%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="4" data-note="Gift Order: Poem Sticker (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -775,7 +789,7 @@ footer a{color:var(--rose-light)}
           <p>Hand-painted 2×3 sticker with a peachy mountain and blue wildflowers.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">7 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Take%20a%20Hike%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="4" data-note="Gift Order: "Take a Hike" Stickers (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -785,7 +799,7 @@ footer a{color:var(--rose-light)}
           <p>Hand-painted 2×3 sticker of the golden mountain landscape.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">9 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Golden%20Mountain%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="4" data-note="Gift Order: Golden Mountain Stickers (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d3">
@@ -795,7 +809,7 @@ footer a{color:var(--rose-light)}
           <p>The golden mountains as a 2×3 magnet — art for your fridge.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$6</span><span class="qty">3 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=6&note=Gift%20Order%3A%20Golden%20Mountain%20Magnet%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="6" data-note="Gift Order: Golden Mountain Magnets (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d1">
@@ -805,7 +819,7 @@ footer a{color:var(--rose-light)}
           <p>Cassidy's 2.5×3 brand sticker — a sweet golden retriever wreathed in wildflowers.</p>
           <p style="font-family:var(--font-hand);font-size:1.15rem;color:var(--clay);margin:0">Cassidy's own artwork — Evergreen Artistry</p>
           <div class="gift-meta"><span>$4</span><span class="qty">5 available</span></div>
-          <a class="btn btn-primary js-petal" href="https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=4&note=Gift%20Order%3A%20Evergreen%20Artistry%20Sticker%20%F0%9F%8C%BC%20%28please%20include%20your%20contact%20info%29" target="_blank" rel="noopener">Purchase This Gift</a>
+          <a class="btn btn-primary js-petal js-venmo" data-amt="4" data-note="Gift Order: Evergreen Artistry Stickers (please include your address)" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Buy on Venmo</a>
         </div>
       </article>
       <article class="gift reveal reveal-d2">
@@ -892,6 +906,7 @@ footer a{color:var(--rose-light)}
       <input type="number" id="main-custom" min="1" step="1" inputmode="numeric" placeholder="$ Your gift">
       <a class="btn btn-primary js-petal js-custom-venmo" data-input="main-custom" href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener">Donate Now</a>
     </div>
+    <p class="venmo-tip reveal"><span>💜</span><span>Type an amount above and we'll carry it into Venmo for you. Or just tap through and enter any amount there. 💛</span></p>
   </div>
 </section>
 
@@ -1094,26 +1109,72 @@ document.querySelectorAll(".js-petal").forEach(el=>{
   } else { run(); }
 })();
 
-document.querySelectorAll(".jar-btn").forEach(btn=>{
-  btn.addEventListener("click", (e)=>{
-    petalBurst(e.clientX || 200, e.clientY || 200);
-    const amt = btn.dataset.amount;
-    const note = encodeURIComponent("Fill Cassidy's Pantry 🌷");
-    window.location.href = "https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=" + amt + "&note=" + note;
-  });
-});
+/* ---------- Smart Venmo routing ----------
+   Mobile: open the Venmo APP with amount + note already filled in (the user is
+   signed in there, so it's one tap to pay). If the app isn't installed, fall
+   back to the web profile. Desktop: go straight to the web profile. */
+(function(){
+  const USER = "Heather-Robertson-47";
+  const PROFILE = "https://account.venmo.com/u/" + USER;
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-document.querySelectorAll(".js-custom-venmo").forEach(btn=>{
-  btn.addEventListener("click", (e)=>{
-    const input = document.getElementById(btn.dataset.input);
-    const amt = input && parseFloat(input.value);
-    if(amt && amt > 0){
+  function appLink(amt, note){
+    return "venmo://paycharge?txn=pay&recipients=" + USER
+         + (amt ? "&amount=" + encodeURIComponent(amt) : "")
+         + (note ? "&note=" + encodeURIComponent(note) : "");
+  }
+
+  function goVenmo(amt, note){
+    if(!isMobile){ window.open(PROFILE, "_blank"); return; }
+    const started = Date.now();
+    const timer = setTimeout(function(){
+      // Still here? The app didn't open — send them to the web profile.
+      if(document.visibilityState === "visible" && Date.now() - started < 2500){
+        window.location.href = PROFILE;
+      }
+    }, 900);
+    document.addEventListener("visibilitychange", function once(){
+      if(document.visibilityState === "hidden") clearTimeout(timer);
+      document.removeEventListener("visibilitychange", once);
+    });
+    window.location.href = appLink(amt, note);
+  }
+
+  // Buttons carrying a specific amount + note
+  document.querySelectorAll(".js-venmo").forEach(function(el){
+    el.addEventListener("click", function(e){
       e.preventDefault();
-      const note = encodeURIComponent("Supporting Cassidy's Climb 🌸");
-      window.open("https://venmo.com/?txn=pay&recipients=Heather-Robertson-47&amount=" + amt + "&note=" + note, "_blank");
-    }
+      goVenmo(el.dataset.amt, el.dataset.note);
+    });
   });
-});
+
+  // Pantry jars
+  document.querySelectorAll(".jar-btn").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      petalBurst(e.clientX || 200, e.clientY || 200);
+      goVenmo(btn.dataset.amount, "Fill Cassidy's Pantry — Worth the Climb");
+    });
+  });
+
+  // Custom-amount boxes use whatever the person typed
+  document.querySelectorAll(".js-custom-venmo").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      const input = document.getElementById(btn.dataset.input);
+      const amt = input && parseFloat(input.value) > 0 ? input.value : "";
+      goVenmo(amt, "Worth the Climb — Supporting Cassidy");
+    });
+  });
+
+  // Plain "Donate Now" links (nav, hero, sticky bar, final CTA)
+  document.querySelectorAll('a[href="' + PROFILE + '"]').forEach(function(el){
+    if(el.classList.contains("js-venmo") || el.classList.contains("js-custom-venmo")) return;
+    el.addEventListener("click", function(e){
+      e.preventDefault();
+      goVenmo("", "Worth the Climb — Supporting Cassidy");
+    });
+  });
+})();
 
 document.getElementById("enc-form").addEventListener("submit", function(e){
   e.preventDefault();
