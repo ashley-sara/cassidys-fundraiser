@@ -237,6 +237,65 @@ a.card:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
   font-size:.8rem;color:var(--clay);font-weight:700;margin:.15rem 0 0;line-height:1.4;
 }
 
+/* ---------- Internship progress update ---------- */
+.update-wrap{max-width:900px;margin:0 auto}
+.hours-card{
+  background:#fff;border:1px solid var(--paper-line);border-radius:var(--radius);
+  padding:1.75rem 1.5rem;text-align:center;box-shadow:var(--shadow);max-width:560px;margin:0 auto;
+}
+.hours-figure{
+  font-family:var(--font-head);font-size:clamp(2rem,7vw,2.9rem);color:var(--forest);
+  font-weight:600;line-height:1.1;
+}
+.hours-figure span{color:var(--clay)}
+.hours-sub{font-weight:700;color:var(--sage);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;margin-top:.35rem}
+.hours-track{
+  height:14px;border-radius:999px;background:var(--linen);border:1px solid var(--paper-line);
+  margin:1.1rem 0 .5rem;overflow:hidden;
+}
+.hours-fill{height:100%;width:50%;border-radius:999px;background:linear-gradient(90deg,var(--sage),var(--forest))}
+
+.rotations{display:grid;grid-template-columns:1fr;gap:1rem;margin:2.25rem auto 0}
+@media (min-width:760px){ .rotations{grid-template-columns:repeat(3,1fr)} }
+.rotation{
+  background:#fff;border:1px solid var(--paper-line);border-radius:var(--radius);
+  padding:1.4rem 1.35rem;box-shadow:0 4px 16px rgba(47,74,56,.06);
+}
+.rotation.done{background:var(--sage-light);border-color:var(--sage)}
+.rotation-stage{
+  font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--clay);margin-bottom:.15rem;
+}
+.rotation h4{
+  font-family:var(--font-head);font-size:1.08rem;color:var(--forest);
+  margin:0 0 .7rem;font-weight:600;line-height:1.25;
+}
+.rotation ul{list-style:none;margin:0;padding:0}
+.rotation li{
+  font-size:.94rem;padding:.3rem 0 .3rem 1.5rem;position:relative;line-height:1.45;
+}
+.rotation li::before{
+  content:"○";position:absolute;left:0;top:.28rem;color:var(--sage);font-size:.9rem;
+}
+.rotation.done li::before{content:"✓";color:var(--forest);font-weight:700}
+
+.update-quote{
+  font-family:var(--font-hand);font-size:1.5rem;color:var(--clay);line-height:1.45;
+  text-align:center;max-width:46ch;margin:2.25rem auto 0;
+}
+.update-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:760px;margin:2.25rem auto 0}
+.update-photos img{
+  width:100%;object-fit:cover;border-radius:14px;border:4px solid #fff;
+  box-shadow:var(--shadow);cursor:zoom-in;display:block;transition:transform .3s ease;
+}
+.update-photos img:hover{transform:translateY(-4px) rotate(-.6deg)}
+.update-photos .wide{grid-column:span 2;aspect-ratio:16/9}
+.update-photos .tall{aspect-ratio:3/4}
+@media (max-width:560px){
+  .update-photos{gap:.7rem}
+  .update-photos img{border-width:3px}
+}
+
 .progress-wrap{max-width:720px;margin:2rem auto 0}
 .progress-figures{display:flex;justify-content:space-between;font-weight:800;color:var(--forest);margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem;font-size:1.15rem}
 .progress-track{height:32px;border-radius:999px;background:#fff;border:2px solid var(--sage);overflow:visible;position:relative;margin-top:2.2rem}
@@ -325,6 +384,7 @@ footer a{color:var(--rose-light)}
     </a>
     <div class="nav-links">
       <a href="#story">Her Story</a>
+      <a href="#update">Her Progress</a>
       <a href="#ways">Ways to Give</a>
       <a href="#gifts">🎁 Gift Shop</a>
       <a href="https://account.venmo.com/u/Heather-Robertson-47" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1.2rem">Donate Now</a>
@@ -473,6 +533,58 @@ footer a{color:var(--rose-light)}
         </div>
         <p class="buffalo-caption">Officially Buffalo bound. 💙</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="update" class="alt" aria-labelledby="update-h">
+  <div class="wrap update-wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Internship Update · October 2026</span>
+      <h2 id="update-h">Halfway Up the Mountain</h2>
+      <p>Cassidy is officially halfway through her internship at Golisano Children's Hospital. Here's where she's been — and where she's headed next.</p>
+    </div>
+
+    <div class="hours-card reveal reveal-d1">
+      <div class="hours-figure"><span>300</span> hours down</div>
+      <div class="hours-track" role="img" aria-label="300 of 600 internship hours complete"><div class="hours-fill"></div></div>
+      <div class="hours-sub">300 to go · 600 total</div>
+    </div>
+
+    <div class="rotations">
+      <div class="rotation done reveal reveal-d1">
+        <p class="rotation-stage">Completed</p>
+        <h4>First Three Rotations</h4>
+        <ul>
+          <li>Pediatric ICU</li>
+          <li>Same Day Surgery</li>
+          <li>Radiology</li>
+        </ul>
+      </div>
+      <div class="rotation reveal reveal-d2">
+        <p class="rotation-stage">Next Three Weeks</p>
+        <h4>Up Next</h4>
+        <ul>
+          <li>Emergency Department</li>
+          <li>General Inpatient Unit</li>
+          <li>Hematology/Oncology &amp; Epilepsy</li>
+        </ul>
+      </div>
+      <div class="rotation reveal reveal-d3">
+        <p class="rotation-stage">Final Five Weeks</p>
+        <h4>Back Where She Started</h4>
+        <ul>
+          <li>Pediatric ICU — putting everything she's learned into practice</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="update-quote reveal reveal-d2">"300 hours down, 300 to go!" 💙</p>
+
+    <div class="update-photos reveal reveal-d3">
+      <img class="tall" src="cassidy-update-badge.jpg" alt="Cassidy wearing her Child Life Intern badge at Golisano Children's Hospital">
+      <img class="tall" src="cassidy-update-scrubs.jpg" alt="Cassidy in scrubs during her Child Life internship">
+      <img class="wide" src="cassidy-update-buffalo.jpg" alt="View of downtown Buffalo from Golisano Children's Hospital">
     </div>
   </div>
 </section>
@@ -1290,7 +1402,7 @@ document.querySelectorAll(".js-copy-link").forEach(b=>{
     });
   });
 
-  document.querySelectorAll(".gift-img img:not([data-gallery]), .story-photos img, .story-inline-photo img, .sold-mini-img img, .buffalo-photos img").forEach(img=>{
+  document.querySelectorAll(".gift-img img:not([data-gallery]), .story-photos img, .story-inline-photo img, .sold-mini-img img, .buffalo-photos img, .update-photos img").forEach(img=>{
     img.style.cursor = "zoom-in";
     img.addEventListener("click", e=>{
       e.preventDefault(); e.stopPropagation();
